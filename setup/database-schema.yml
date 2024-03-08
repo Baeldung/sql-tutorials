@@ -1,0 +1,960 @@
+databaseChangeLog:
+- changeSet:
+    id: 1
+    author: initial-setup
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              unique: true
+            name: id
+            type: VARCHAR(10)
+        - column:
+            name: name
+            type: VARCHAR(60)
+        - column:
+            name: textbook
+            type: VARCHAR(100)
+        - column:
+            name: credits
+            type: INT
+        - column:
+            name: is_active
+            type: VARCHAR(10)
+        - column:
+            name: department_id
+            type: INT
+        tableName: Course
+- changeSet:
+    id: 2
+    author: initial-setup
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              unique: true
+            name: id
+            type: INT
+        - column:
+            name: name
+            type: VARCHAR(50)
+        - column:
+            name: code
+            type: VARCHAR(4)
+        tableName: Department
+- changeSet:
+    id: 3
+    author: initial-setup
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              unique: true
+            name: id
+            type: INT
+        - column:
+            name: exam_date
+            type: date
+        - column:
+            name: grade
+            type: VARCHAR(2)
+        - column:
+            name: course_id
+            type: VARCHAR(10)
+        - column:
+            name: student_id
+            type: INT
+        tableName: Exam
+- changeSet:
+    id: 4
+    author: initial-setup
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              unique: true
+            name: id
+            type: INT
+        - column:
+            name: name
+            type: VARCHAR(60)
+        - column:
+            constraints:
+              nullable: false
+            name: ssn
+            type: BIGINT
+        - column:
+            name: position
+            type: VARCHAR(30)
+        - column:
+            name: start_date
+            type: date
+        - column:
+            name: end_date
+            type: date
+        - column:
+            name: department_id
+            type: INT
+        tableName: Faculty
+- changeSet:
+    id: 5
+    author: initial-setup
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              unique: true
+            name: id
+            type: INT
+        - column:
+            name: course_id
+            type: VARCHAR(10)
+        - column:
+            constraints:
+              nullable: false
+            name: prerequisite_id
+            type: VARCHAR(10)
+        tableName: Prerequisite
+- changeSet:
+    id: 6
+    author: initial-setup
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              unique: true
+            name: id
+            type: INT
+        - column:
+            name: name
+            type: VARCHAR(50)
+        - column:
+            name: description
+            type: VARCHAR(250)
+        - column:
+            name: start_date
+            type: date
+        - column:
+            name: end_date
+            type: date
+        - column:
+            name: type
+            type: VARCHAR(20)
+        - column:
+            name: department_id
+            type: INT
+        tableName: Program
+- changeSet:
+    id: 7
+    author: initial-setup
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              unique: true
+            name: id
+            type: INT
+        - column:
+            name: semester
+            type: VARCHAR(30)
+        - column:
+            name: year
+            type: INT
+        - column:
+            name: registration_datetime
+            type: datetime
+        - column:
+            name: course_id
+            type: VARCHAR(10)
+        - column:
+            name: student_id
+            type: INT
+        tableName: Registration
+- changeSet:
+    id: 8
+    author: initial-setup
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              unique: true
+            name: id
+            type: INT
+        - column:
+            name: status
+            type: VARCHAR(20)
+        - column:
+            name: course_id
+            type: VARCHAR(10)
+        - column:
+            name: program_id
+            type: INT
+        tableName: Specification
+- changeSet:
+    id: 9
+    author: initial-setup
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              unique: true
+            name: id
+            type: INT
+        - column:
+            name: name
+            type: VARCHAR(60)
+        - column:
+            constraints:
+              nullable: false
+            name: ssn
+            type: BIGINT
+        - column:
+            name: birth_date
+            type: date
+        - column:
+            name: enrollment_date
+            type: date
+        - column:
+            name: graduation_date
+            type: date
+        tableName: Student
+- changeSet:
+    id: 10
+    author: initial-setup
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              unique: true
+            name: id
+            type: INT
+        - column:
+            name: role
+            type: VARCHAR(60)
+        - column:
+            name: semester
+            type: VARCHAR(30)
+        - column:
+            name: year
+            type: INT
+        - column:
+            name: course_id
+            type: VARCHAR(10)
+        - column:
+            name: faculty_id
+            type: INT
+        tableName: Teaching
+- changeSet:
+    id: 11
+    author: initial-setup
+    changes:
+    - loadData:
+        columns:
+        - column:
+            header: id
+            name: id
+            type: STRING
+        - column:
+            header: name
+            name: name
+            type: STRING
+        - column:
+            header: textbook
+            name: textbook
+            type: STRING
+        - column:
+            header: credits
+            name: credits
+            type: NUMERIC
+        - column:
+            header: is_active
+            name: is_active
+            type: STRING
+        - column:
+            header: department_id
+            name: department_id
+            type: NUMERIC
+        commentLineStartsWith: '#'
+        encoding: UTF-8
+        file: ./sql-data/course.csv
+        quotchar: '"'
+        separator: ','
+        tableName: Course
+- changeSet:
+    id: 12
+    author: initial-setup
+    changes:
+    - loadData:
+        columns:
+        - column:
+            header: id
+            name: id
+            type: NUMERIC
+        - column:
+            header: name
+            name: name
+            type: STRING
+        - column:
+            header: code
+            name: code
+            type: STRING
+        commentLineStartsWith: '#'
+        encoding: UTF-8
+        file: ./sql-data/department.csv
+        quotchar: '"'
+        separator: ','
+        tableName: Department
+- changeSet:
+    id: 13
+    author: initial-setup
+    changes:
+    - loadData:
+        columns:
+        - column:
+            header: id
+            name: id
+            type: NUMERIC
+        - column:
+            header: exam_date
+            name: exam_date
+            type: DATE
+        - column:
+            header: grade
+            name: grade
+            type: STRING
+        - column:
+            header: course_id
+            name: course_id
+            type: STRING
+        - column:
+            header: student_id
+            name: student_id
+            type: NUMERIC
+        commentLineStartsWith: '#'
+        encoding: UTF-8
+        file: ./sql-data/exam.csv
+        quotchar: '"'
+        separator: ','
+        tableName: Exam
+- changeSet:
+    id: 14
+    author: initial-setup
+    changes:
+    - loadData:
+        columns:
+        - column:
+            header: id
+            name: id
+            type: NUMERIC
+        - column:
+            header: name
+            name: name
+            type: STRING
+        - column:
+            header: ssn
+            name: ssn
+            type: NUMERIC
+        - column:
+            header: position
+            name: position
+            type: STRING
+        - column:
+            header: start_date
+            name: start_date
+            type: DATE
+        - column:
+            header: end_date
+            name: end_date
+            type: DATE
+        - column:
+            header: department_id
+            name: department_id
+            type: NUMERIC
+        commentLineStartsWith: '#'
+        encoding: UTF-8
+        file: ./sql-data/faculty.csv
+        quotchar: '"'
+        separator: ','
+        tableName: Faculty
+- changeSet:
+    id: 15
+    author: initial-setup
+    changes:
+    - loadData:
+        columns:
+        - column:
+            header: id
+            name: id
+            type: NUMERIC
+        - column:
+            header: course_id
+            name: course_id
+            type: STRING
+        - column:
+            header: prerequisite_id
+            name: prerequisite_id
+            type: STRING
+        commentLineStartsWith: '#'
+        encoding: UTF-8
+        file: ./sql-data/prerequisite.csv
+        quotchar: '"'
+        separator: ','
+        tableName: Prerequisite
+- changeSet:
+    id: 16
+    author: initial-setup
+    changes:
+    - loadData:
+        columns:
+        - column:
+            header: id
+            name: id
+            type: NUMERIC
+        - column:
+            header: name
+            name: name
+            type: STRING
+        - column:
+            header: description
+            name: description
+            type: STRING
+        - column:
+            header: start_date
+            name: start_date
+            type: DATE
+        - column:
+            header: end_date
+            name: end_date
+            type: skip
+        - column:
+            header: type
+            name: type
+            type: STRING
+        - column:
+            header: department_id
+            name: department_id
+            type: NUMERIC
+        commentLineStartsWith: '#'
+        encoding: UTF-8
+        file: ./sql-data/program.csv
+        quotchar: '"'
+        separator: ','
+        tableName: Program
+- changeSet:
+    id: 17
+    author: initial-setup
+    changes:
+    - loadData:
+        columns:
+        - column:
+            header: id
+            name: id
+            type: NUMERIC
+        - column:
+            header: semester
+            name: semester
+            type: STRING
+        - column:
+            header: year
+            name: year
+            type: NUMERIC
+        - column:
+            header: registration_datetime
+            name: registration_datetime
+            type: STRING
+        - column:
+            header: course_id
+            name: course_id
+            type: STRING
+        - column:
+            header: student_id
+            name: student_id
+            type: NUMERIC
+        commentLineStartsWith: '#'
+        encoding: UTF-8
+        file: ./sql-data/registration.csv
+        quotchar: '"'
+        separator: ','
+        tableName: Registration
+- changeSet:
+    id: 18
+    author: initial-setup
+    changes:
+    - loadData:
+        columns:
+        - column:
+            header: id
+            name: id
+            type: NUMERIC
+        - column:
+            header: status
+            name: status
+            type: STRING
+        - column:
+            header: course_id
+            name: course_id
+            type: STRING
+        - column:
+            header: program_id
+            name: program_id
+            type: NUMERIC
+        commentLineStartsWith: '#'
+        encoding: UTF-8
+        file: ./sql-data/specification.csv
+        quotchar: '"'
+        separator: ','
+        tableName: Specification
+- changeSet:
+    id: 19
+    author: initial-setup
+    changes:
+    - loadData:
+        columns:
+        - column:
+            header: id
+            name: id
+            type: NUMERIC
+        - column:
+            header: name
+            name: name
+            type: STRING
+        - column:
+            header: ssn
+            name: ssn
+            type: NUMERIC
+        - column:
+            header: birth_date
+            name: birth_date
+            type: DATE
+        - column:
+            header: enrollment_date
+            name: enrollment_date
+            type: DATE
+        - column:
+            header: graduation_date
+            name: graduation_date
+            type: DATE
+        commentLineStartsWith: '#'
+        encoding: UTF-8
+        file: ./sql-data/student.csv
+        quotchar: '"'
+        separator: ','
+        tableName: Student
+- changeSet:
+    id: 20
+    author: initial-setup
+    changes:
+    - loadData:
+        columns:
+        - column:
+            header: id
+            name: id
+            type: NUMERIC
+        - column:
+            header: role
+            name: role
+            type: STRING
+        - column:
+            header: semester
+            name: semester
+            type: STRING
+        - column:
+            header: year
+            name: year
+            type: NUMERIC
+        - column:
+            header: course_id
+            name: course_id
+            type: STRING
+        - column:
+            header: faculty_id
+            name: faculty_id
+            type: NUMERIC
+        commentLineStartsWith: '#'
+        encoding: UTF-8
+        file: ./sql-data/teaching.csv
+        quotchar: '"'
+        separator: ','
+        tableName: Teaching
+- changeSet:
+    id: 21
+    author: initial-setup
+    changes:
+    - createIndex:
+        associatedWith: ''
+        columns:
+        - column:
+            name: course_id
+        indexName: exam_course_id
+        tableName: Exam
+- changeSet:
+    id: 22
+    author: initial-setup
+    changes:
+    - createIndex:
+        associatedWith: ''
+        columns:
+        - column:
+            name: course_id
+        indexName: prerequisite_course_id
+        tableName: Prerequisite
+- changeSet:
+    id: 23
+    author: initial-setup
+    changes:
+    - createIndex:
+        associatedWith: ''
+        columns:
+        - column:
+            name: course_id
+        indexName: registration_course_id
+        tableName: Registration
+- changeSet:
+    id: 24
+    author: initial-setup
+    changes:
+    - createIndex:
+        associatedWith: ''
+        columns:
+        - column:
+            name: course_id
+        indexName: specification_course_id
+        tableName: Specification
+- changeSet:
+    id: 25
+    author: initial-setup
+    changes:
+    - createIndex:
+        associatedWith: ''
+        columns:
+        - column:
+            name: course_id
+        indexName: teaching_course_id
+        tableName: Teaching
+- changeSet:
+    id: 26
+    author: initial-setup
+    changes:
+    - createIndex:
+        associatedWith: ''
+        columns:
+        - column:
+            name: department_id
+        indexName: course_department_id
+        tableName: Course
+- changeSet:
+    id: 27
+    author: initial-setup
+    changes:
+    - createIndex:
+        associatedWith: ''
+        columns:
+        - column:
+            name: department_id
+        indexName: faculty_department_id
+        tableName: Faculty
+- changeSet:
+    id: 28
+    author: initial-setup
+    changes:
+    - createIndex:
+        associatedWith: ''
+        columns:
+        - column:
+            name: department_id
+        indexName: program_department_id
+        tableName: Program
+- changeSet:
+    id: 29
+    author: initial-setup
+    changes:
+    - createIndex:
+        associatedWith: ''
+        columns:
+        - column:
+            name: faculty_id
+        indexName: teaching_faculty_id
+        tableName: Teaching
+- changeSet:
+    id: 30
+    author: initial-setup
+    changes:
+    - createIndex:
+        associatedWith: ''
+        columns:
+        - column:
+            name: prerequisite_id
+        indexName: prerequisite_id
+        tableName: Prerequisite
+- changeSet:
+    id: 31
+    author: initial-setup
+    changes:
+    - createIndex:
+        associatedWith: ''
+        columns:
+        - column:
+            name: program_id
+        indexName: specification_program_id
+        tableName: Specification
+- changeSet:
+    id: 32
+    author: initial-setup
+    changes:
+    - createIndex:
+        associatedWith: ''
+        columns:
+        - column:
+            name: student_id
+        indexName: exam_student_id
+        tableName: Exam
+- changeSet:
+    id: 33
+    author: initial-setup
+    changes:
+    - createIndex:
+        associatedWith: ''
+        columns:
+        - column:
+            name: student_id
+        indexName: registration_student_id
+        tableName: Registration
+- changeSet:
+    id: 34
+    author: initial-setup
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: department_id
+        baseTableName: Course
+        constraintName: Course_ibfk_1
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: RESTRICT
+        onUpdate: RESTRICT
+        referencedColumnNames: id
+        referencedTableCatalogName: university
+        referencedTableName: Department
+        validate: true
+- changeSet:
+    id: 35
+    author: initial-setup
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: student_id
+        baseTableName: Exam
+        constraintName: Exam_ibfk_1
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: RESTRICT
+        onUpdate: RESTRICT
+        referencedColumnNames: id
+        referencedTableCatalogName: university
+        referencedTableName: Student
+        validate: true
+- changeSet:
+    id: 36
+    author: initial-setup
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: course_id
+        baseTableName: Exam
+        constraintName: Exam_ibfk_2
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: RESTRICT
+        onUpdate: RESTRICT
+        referencedColumnNames: id
+        referencedTableCatalogName: university
+        referencedTableName: Course
+        validate: true
+- changeSet:
+    id: 37
+    author: initial-setup
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: department_id
+        baseTableName: Faculty
+        constraintName: Faculty_ibfk_1
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: RESTRICT
+        onUpdate: RESTRICT
+        referencedColumnNames: id
+        referencedTableCatalogName: university
+        referencedTableName: Department
+        validate: true
+- changeSet:
+    id: 38
+    author: initial-setup
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: course_id
+        baseTableName: Prerequisite
+        constraintName: Prerequisite_ibfk_1
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: RESTRICT
+        onUpdate: RESTRICT
+        referencedColumnNames: id
+        referencedTableCatalogName: university
+        referencedTableName: Course
+        validate: true
+- changeSet:
+    id: 39
+    author: initial-setup
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: prerequisite_id
+        baseTableName: Prerequisite
+        constraintName: Prerequisite_ibfk_2
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: RESTRICT
+        onUpdate: RESTRICT
+        referencedColumnNames: id
+        referencedTableCatalogName: university
+        referencedTableName: Course
+        validate: true
+- changeSet:
+    id: 40
+    author: initial-setup
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: department_id
+        baseTableName: Program
+        constraintName: Program_ibfk_1
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: RESTRICT
+        onUpdate: RESTRICT
+        referencedColumnNames: id
+        referencedTableCatalogName: university
+        referencedTableName: Department
+        validate: true
+- changeSet:
+    id: 41
+    author: initial-setup
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: course_id
+        baseTableName: Registration
+        constraintName: Registration_ibfk_1
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: RESTRICT
+        onUpdate: RESTRICT
+        referencedColumnNames: id
+        referencedTableCatalogName: university
+        referencedTableName: Course
+        validate: true
+- changeSet:
+    id: 42
+    author: initial-setup
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: student_id
+        baseTableName: Registration
+        constraintName: Registration_ibfk_2
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: RESTRICT
+        onUpdate: RESTRICT
+        referencedColumnNames: id
+        referencedTableCatalogName: university
+        referencedTableName: Student
+        validate: true
+- changeSet:
+    id: 43
+    author: initial-setup
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: course_id
+        baseTableName: Specification
+        constraintName: Specification_ibfk_1
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: RESTRICT
+        onUpdate: RESTRICT
+        referencedColumnNames: id
+        referencedTableCatalogName: university
+        referencedTableName: Course
+        validate: true
+- changeSet:
+    id: 44
+    author: initial-setup
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: program_id
+        baseTableName: Specification
+        constraintName: Specification_ibfk_2
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: RESTRICT
+        onUpdate: RESTRICT
+        referencedColumnNames: id
+        referencedTableCatalogName: university
+        referencedTableName: Program
+        validate: true
+- changeSet:
+    id: 45
+    author: initial-setup
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: course_id
+        baseTableName: Teaching
+        constraintName: Teaching_ibfk_1
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: RESTRICT
+        onUpdate: RESTRICT
+        referencedColumnNames: id
+        referencedTableCatalogName: university
+        referencedTableName: Course
+        validate: true
+- changeSet:
+    id: 46
+    author: initial-setup
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: faculty_id
+        baseTableName: Teaching
+        constraintName: Teaching_ibfk_2
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: RESTRICT
+        onUpdate: RESTRICT
+        referencedColumnNames: id
+        referencedTableCatalogName: university
+        referencedTableName: Faculty
+        validate: true
+
