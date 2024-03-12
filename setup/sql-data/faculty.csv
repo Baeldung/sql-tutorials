@@ -1,4 +1,4 @@
-"id","name","ssn","position","start_date","end_date","department_id"
+"id","name","national_id","position","start_date","end_date","department_id"
 "1","Anubha Gupta","1018901231","Professor","2010-01-11","2027-03-11","2"
 "2","Anubha Gupta","1018901231","Associate Professor","2007-01-09","2010-01-10","2"
 "3","Anubha Gupta","1018901231","Assistant Professor","2004-05-11","2007-01-08","2"

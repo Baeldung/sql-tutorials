@@ -93,7 +93,7 @@ databaseChangeLog:
         - column:
             constraints:
               nullable: false
-            name: ssn
+            name: national_id
             type: BIGINT
         - column:
             name: position
@@ -233,7 +233,7 @@ databaseChangeLog:
         - column:
             constraints:
               nullable: false
-            name: ssn
+            name: national_id
             type: BIGINT
         - column:
             name: birth_date
@@ -381,8 +381,8 @@ databaseChangeLog:
             name: name
             type: STRING
         - column:
-            header: ssn
-            name: ssn
+            header: national_id
+            name: national_id
             type: NUMERIC
         - column:
             header: position
@@ -549,8 +549,8 @@ databaseChangeLog:
             name: name
             type: STRING
         - column:
-            header: ssn
-            name: ssn
+            header: national_id
+            name: national_id
             type: NUMERIC
         - column:
             header: birth_date
