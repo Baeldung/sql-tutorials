@@ -20,6 +20,30 @@ Here's the current current matrix of databases Baeldung is targeting:
 Each database was run in docker, and used the provided tooling within the docker container to extract the dump.
 The scripts each contain a liquibase command and a dump generation command.
 
+# Liquibase Commands
+
+## Export Database with Liquibase
+
+The liquibase command to export each database is largely the same. Update this command with the appropriate connection string:
+
+```bash
+liquibase generate-changelog --url=jdbc:mysql://localhost:3306 \
+     --username=root \
+     --password=password \
+     --schemas=university \
+     --diff-types=columns,foreignkeys,indexes,primarykeys,tables,uniqueconstraints,views,sequences,data \
+     --data-output-directory=./sql-data \
+     --changelog-file=database-schema.yml \
+     --overwrite-output-file=true
+```
+
+## Import Database from Liquibase
+
+The `generate-*-dump` scripts are intended to showcase the commands required per database tech to use the liquibase schema
+and apply it to each database technology.
+
+Note: The oracle script is not complete yet.
+
 # MySQL
 
 ## Liquibase Setup
@@ -40,3 +64,7 @@ but all attempts to connect to the database and import the schema and data were 
 # SQL Server
 
 Liquibase works with SQL Server out of the box.
+
+# Dumps
+
+Dumps for the each database is readily available in the `dumps` folder.
