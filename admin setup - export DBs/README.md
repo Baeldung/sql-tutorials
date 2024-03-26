@@ -2,6 +2,11 @@
 > The contents of this directory are liquibase schema setup files,
 > sample data for this project, and scripts to assist in generating dump files for each database technology.
 
+# Process
+When making changes to the schema, these have to be done in the database-schema.yml file first. If you want to edit the initial data, then make the changes in the sql-data folder.
+
+Then, use Liquibase to generate the dumps for each database. And finally, commit the new dumps in the dumps folder of the repository.
+
 # Installing
 
 Follow the steps on the [Liquibase Docs for your OS](https://docs.liquibase.com/start/install/home.html) to get the core CLI.
@@ -47,10 +52,17 @@ Note: The oracle script is not complete yet.
 # MySQL
 
 ## Liquibase Setup
-
 To use Liquibase with MySQL, you must add the MySQL driver (jar file) in the liquibase installation directory, `./liquibase/lib`.
 
-Download the platform independent archive from [the official downloads page](https://dev.mysql.com/downloads/connector/j/), unzip it, and grab the jar file.
+Download the platform-independent archive from [the official downloads page](https://dev.mysql.com/downloads/connector/j/), unzip it, and grab the jar file.
+
+## MySQL Setup
+
+Download and install the MySQL Community Server and MySQL Workbench: https://dev.mysql.com/downloads/ After connecting to the MySQL Workbench, create a new database called 'university'.
+
+Run the MySQL Liquibase command to create the tables from the YML schema into the 'university' database.
+
+Then, run the mysqldump utility to create a DB dump from the university database. 
 
 # PostgreSQL
 
