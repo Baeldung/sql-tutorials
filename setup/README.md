@@ -3,7 +3,7 @@
 > sample data for this project, and scripts to assist in generating dump files for each database technology.
 
 # Process
-When making changes to the schema, these have to be done in the database-schema.yml file first. 
+When making changes to the schema, these have to be done in the database-schema.yml file first. If you want to edit the initial data, then make the changes in the sql-data folder.
 
 Then, use Liquibase to generate the dumps for each database. And finally, commit the new dumps in the dumps folder of the repository.
 
