@@ -15,4 +15,4 @@ liquibase update --changelog-file=database-schema.yml \
         --password=Password1
 
 # We can create a backup file of the database, but this isn't quite the same as a dump?
-sqlcmd -S localhost -U sa -Q "BACKUP DATABASE [university] TO DISK = N'/tmp/university.bak' WITH NOFORMAT, NOINIT, NAME = 'university-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
+/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Password1 -d university -Q "BACKUP DATABASE [university] TO DISK='sql_server_university_dump.sql'"
