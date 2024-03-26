@@ -1,4 +1,4 @@
-# MySQL Setup 
+# PostgreSQL Setup 
 
 This file contains instructions to set up your local PostgreSQL database. 
 
