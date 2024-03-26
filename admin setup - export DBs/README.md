@@ -62,11 +62,16 @@ Download and install the MySQL Community Server and MySQL Workbench: https://dev
 
 Run the MySQL Liquibase command to create the tables from the YML schema into the 'university' database.
 
-Then, run the mysqldump utility to create a DB dump from the university database. 
+Then, follow the instructions in generate-mysql-dump.sh to create a DB dump from the university database. 
 
 # PostgreSQL
 
-Liquibase works with postgres out of the box.
+Liquibase works with Postgres out of the box.
+
+Download and install PostgreSQL: https://www.postgresql.org/download/ and the pgAdmin management tool: https://www.pgadmin.org/download/
+Connect to the pgAdmin tool and create a new database called 'university'.
+
+Then, follow the instructions in generate-postgres-dump.sh to create a DB dump from the university database. 
 
 # Oracle DB
 
@@ -77,6 +82,12 @@ but all attempts to connect to the database and import the schema and data were 
 
 Liquibase works with SQL Server out of the box.
 
+Download and install SQL Server Express Edition: https://www.microsoft.com/en-us/sql-server/sql-server-downloads and SQL Server Management Studio (SSMS): https://learn.microsoft.com/en-gb/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16 
+Open SSMS and connect to the SQL Server, then create a new database called 'university'. If you get an error during the Connection, set the option Encryption to Optional in the "Connect" window.
+
+
+Then, follow the instructions in generate-sqlserver-dump.sh to create a DB dump from the university database. 
+
 # Dumps
 
-Dumps for the each database is readily available in the `dumps` folder.
+Dumps for each database are readily available in their respective folder under 'user setup'.
