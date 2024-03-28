@@ -1,4 +1,4 @@
-# MySQL Setup 
+# SQL Server Setup 
 
 This file contains instructions to set up your local SQL Server database. 
 
