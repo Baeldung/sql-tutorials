@@ -2,7 +2,7 @@
 
 This file contains instructions to set up your local SQL Server database. 
 
-## SQL Sever Install
+## SQL Server Local Installation
 
 Download and install the MySQL Community Server and MySQL Workbench: https://dev.mysql.com/downloads/ After connecting to the MySQL Workbench, create a new database called 'university'.
 
