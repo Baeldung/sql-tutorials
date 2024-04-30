@@ -14,9 +14,3 @@ Connect to SSMS, and run the script within university-sqlserver.sql file to crea
 The script will drop the database if it exists, then create a new database and tables.
 
 Lastly, copy and run the script in the populate-university-db file to add data to the tables.
-
-
-
-
-
-
