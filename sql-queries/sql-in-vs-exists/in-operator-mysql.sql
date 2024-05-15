@@ -1,0 +1,1 @@
+SELECT * FROM Department where code IN('ME', 'CE');
