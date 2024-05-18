@@ -1,0 +1,1 @@
+SELECT id, name from Department WHERE ISNULL(code, '') = '' OR TRIM(code) = '';
