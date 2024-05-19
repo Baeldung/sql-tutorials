@@ -1,1 +1,1 @@
-SELECT * FROM Department where code IN('ME', 'CE');
+SELECT * FROM Department WHERE code IN('ME', 'CE');
