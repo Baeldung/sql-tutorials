@@ -1,1 +1,0 @@
-SELECT * FROM Exam WHERE id IN (SELECT id FROM Department);
