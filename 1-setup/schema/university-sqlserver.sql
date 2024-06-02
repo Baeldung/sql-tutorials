@@ -1,7 +1,10 @@
 -- SQL script to create DB, and tables. Then insert data in each table
 -- Run these 2 statements in a separate query
-DROP DATABASE IF EXISTS University;
-CREATE DATABASE University;
+IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'University')
+BEGIN
+    CREATE DATABASE University;
+END
+GO
 
 -- Change schema to University
 USE University;
