@@ -44,4 +44,4 @@ docker-compose up
 This starts PostgreSQL, MySQL, SQL Server and Adminer GUI in a single command. 
 
 ### Using separate GUI
-Another way is to start all the databases manually using their on `docker-compise.yml` files. If you have a preferred GUI such as [DB Visualizer](https://www.dbvis.com/), [PG Admin](https://www.pgadmin.org/) or any other, you can use it to connect to the docker databases. In such cases, they can be accessed using `localhost` url with the correct port from respective docker-compose files.
+Another way is to start all the databases manually using their on `docker-compose.yml` files. If you have a preferred GUI such as [DB Visualizer](https://www.dbvis.com/), [PG Admin](https://www.pgadmin.org/) or any other, you can use it to connect to the docker databases. In such cases, they can be accessed using `localhost` url with the correct port from respective docker-compose files.
