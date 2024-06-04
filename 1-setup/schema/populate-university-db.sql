@@ -1,4 +1,5 @@
 -- Adding data 
+
 INSERT INTO Department (id, name, code) VALUES
   (1, 'Computer Science', 'CS'),
   (2, 'Electronics and Communications', 'EC'),
