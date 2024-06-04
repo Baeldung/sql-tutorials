@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      SA_PASSWORD: 'Password!2024'
+      ACCEPT_EULA: 'Y'
+      JAVA_TOOL_OPTIONS: "-Djavax.net.ssl.trustStore=NONE -Djavax.net.ssl.trustStoreType=WINDOWS-ROOT -Djavax.net.ssl.trustStoreProvider=SUN -Dcom.microsoft.sqlserver.jdbc.DSTLProtocol=true" 
+    ports:
+      - "1433:1433"
+    volumes:
+      - ../../schema/university-sqlserver.sql:/university-sqlserver.sql
+    command: >
+      /bin/bash -c "
+      /opt/mssql/bin/sqlservr & 
+      sleep 30 && 
+      /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Password!2024' -i /university-sqlserver.sql &&
+      while true; do sleep 3600; done
+      "
+    
