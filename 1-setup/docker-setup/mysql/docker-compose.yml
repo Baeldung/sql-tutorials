@@ -6,8 +6,9 @@ services:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: University
       MYSQL_USER: user
-      MYSQL_PASSWORD: password
+      MYSQL_PASSWORD: Password!2024
     ports:
       - "3306:3306"
     volumes:
       - ../../schema/university-mysql.sql:/docker-entrypoint-initdb.d/init.sql
+      - ../../schema/populate-university-db.sql:/docker-entrypoint-initdb.d/insert-scripts.sql
