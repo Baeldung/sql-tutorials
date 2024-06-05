@@ -3,6 +3,7 @@ services:
   mssql:
     image: mcr.microsoft.com/mssql/server:2022-latest
     environment:
+      # Please note that that the username for this account is SA. 
       SA_PASSWORD: 'Password!2024'
       ACCEPT_EULA: 'Y'
       JAVA_TOOL_OPTIONS: "-Djavax.net.ssl.trustStore=NONE -Djavax.net.ssl.trustStoreType=WINDOWS-ROOT -Djavax.net.ssl.trustStoreProvider=SUN -Dcom.microsoft.sqlserver.jdbc.DSTLProtocol=true" 
