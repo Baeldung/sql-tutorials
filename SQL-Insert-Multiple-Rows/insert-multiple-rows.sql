@@ -14,7 +14,7 @@ VALUES (1001, 'John Liu', '123345566'),
 
 INSERT INTO Student (id, name, national_id)
 SELECT id, name, national_id
-FROM old_student
+FROM Old_student
 WHERE graduation_date = '2024-06-15';
 
 
