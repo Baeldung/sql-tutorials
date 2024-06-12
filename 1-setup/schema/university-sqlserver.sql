@@ -58,6 +58,7 @@ CREATE TABLE Faculty
     start_date DATE,
     end_date DATE,
     department_id INT,
+    active BIT DEFAULT 1,
     CONSTRAINT faculty_department_id_fkey FOREIGN KEY(department_id) REFERENCES Department(id),
     UNIQUE (id)
 );

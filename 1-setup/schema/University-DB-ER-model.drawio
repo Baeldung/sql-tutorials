@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-12T17:59:12.258Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="CQfK0xWJdO4TPSSOsVKN" version="24.5.4" type="device">
+<mxfile host="app.diagrams.net" modified="2024-06-12T18:55:40.534Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="QsMRP0G2qmgOHPBHAOd5" version="24.5.4" type="device">
   <diagram id="cdb5e136-1861-7ef1-5e76-c57f7e18aa8d" name="UML">
     <mxGraphModel dx="954" dy="506" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -11,7 +11,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="4a63a70a29bb4ada-1" value="Faculty" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#ffe6cc;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;strokeWidth=1;fontSize=13;strokeColor=#d79b00;" parent="1" vertex="1">
-          <mxGeometry y="2" width="160" height="224" as="geometry" />
+          <mxGeometry y="2" width="160" height="250" as="geometry" />
         </mxCell>
         <mxCell id="4a63a70a29bb4ada-2" value="id" style="shape=partialRectangle;top=0;left=0;right=0;bottom=1;align=left;verticalAlign=middle;fillColor=none;spacingLeft=34;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;dropTarget=0;fontStyle=5;" parent="4a63a70a29bb4ada-1" vertex="1">
           <mxGeometry y="26" width="160" height="30" as="geometry" />
@@ -53,6 +53,12 @@
           <mxGeometry y="198" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="-yvy37UwG201HpsQHLqc-2" value="" style="shape=partialRectangle;top=0;left=0;bottom=0;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[];portConstraint=eastwest;part=1;" parent="-yvy37UwG201HpsQHLqc-1" vertex="1" connectable="0">
+          <mxGeometry width="30" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="AV330qxZJO8WnukwR470-12" value="active" style="shape=partialRectangle;top=0;left=0;right=0;bottom=0;align=left;verticalAlign=top;fillColor=none;spacingLeft=34;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;dropTarget=0;" vertex="1" parent="4a63a70a29bb4ada-1">
+          <mxGeometry y="224" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="AV330qxZJO8WnukwR470-13" value="" style="shape=partialRectangle;top=0;left=0;bottom=0;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[];portConstraint=eastwest;part=1;" vertex="1" connectable="0" parent="AV330qxZJO8WnukwR470-12">
           <mxGeometry width="30" height="26" as="geometry" />
         </mxCell>
         <mxCell id="4a63a70a29bb4ada-32" value="Department" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#FFE6CC;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;strokeWidth=1;fontSize=13;strokeColor=#d79b00;" parent="1" vertex="1">
