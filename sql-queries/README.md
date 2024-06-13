@@ -5,3 +5,4 @@
 - [How to Execute an IF…THEN Logic in an SQL SELECT Statement](https://www.baeldung.com/sql/select-conditional-logic)
 - [Preventing Division by Zero Errors in SQL](https://www.baeldung.com/sql/division-by-zero-avoid)
 - [Matching Multiple Patterns in Queries](https://www.baeldung.com/sql/match-multiple-patterns)
+- [Identifying Tables Containing a Specific Column Name](https://www.baeldung.com/sql/find-table-with-column-name)
