@@ -4,3 +4,4 @@
 - [Understanding the Distinction Between EXISTS and IN in SQL](https://www.baeldung.com/sql/in-vs-exists)
 - [How to Execute an IF…THEN Logic in an SQL SELECT Statement](https://www.baeldung.com/sql/select-conditional-logic)
 - [Preventing Division by Zero Errors in SQL](https://www.baeldung.com/sql/division-by-zero-avoid)
+- [Matching Multiple Patterns in Queries](https://www.baeldung.com/sql/match-multiple-patterns)
