@@ -6,3 +6,4 @@
 - [Preventing Division by Zero Errors in SQL](https://www.baeldung.com/sql/division-by-zero-avoid)
 - [Matching Multiple Patterns in Queries](https://www.baeldung.com/sql/match-multiple-patterns)
 - [Identifying Tables Containing a Specific Column Name](https://www.baeldung.com/sql/find-table-with-column-name)
+- [Find Null or Empty Values in SQL](https://www.baeldung.com/sql/select-null-empty-strings)
