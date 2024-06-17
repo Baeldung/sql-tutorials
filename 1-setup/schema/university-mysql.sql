@@ -39,7 +39,7 @@ CREATE TABLE Student
     birth_date DATE,
     enrollment_date DATE,
     graduation_date DATE,
-    gpa FLOAT(4,2),
+    gpa FLOAT,
     UNIQUE (id)
 );
 
