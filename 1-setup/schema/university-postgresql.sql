@@ -143,3 +143,6 @@ CREATE TABLE Exam
     CONSTRAINT exam_course_id_fkey FOREIGN KEY(course_id) REFERENCES Course(id),
     UNIQUE (id)
 );
+CREATE INDEX std_index
+ON student (national_id, enrollment_date);
+
