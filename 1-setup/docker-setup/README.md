@@ -31,7 +31,7 @@ PROFILE=full docker compose up
 To use the Adminer GUI, we can run the docker-compose file inside the directory `adminer-gui`:
 ```
 cd adminer-gui
-docker-compose up
+docker compose up
 ```
 Once this is started, the database client is accessible on http://localhost:8080
 
@@ -44,9 +44,11 @@ Now you can connect to the database by providing the credentials which is availa
 It is also possible to run all three databases and also start the Adminer GUI tool. For it, use the `docker-compose.yml` in the `docker-setup` directory directly:
 ```
 cd docker-setup
-docker-compose up
+docker compose up
 ```
-This starts the databases in `simple` mode. To use the `full` profile, use:
+This starts the databases in `simple` mode. 
+
+To use the `full` profile, use:
 ```
 cd docker-setup
 PROFILE=full docker compose up
