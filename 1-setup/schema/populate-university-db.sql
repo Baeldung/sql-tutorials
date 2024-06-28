@@ -1512,4 +1512,15 @@ SELECT * from Program;
 
 SELECT * from Specification;
 
+SELECT *
+FROM student
+WHERE national_id = '123456789'
+AND enrollment_date = '2023-09-01'; 
+
+EXPLAIN SELECT *
+FROM student
+WHERE national_id = '3043455662'
+AND enrollment_date = '2021-01-15'; 
+
+
 SELECT * from Exam;
