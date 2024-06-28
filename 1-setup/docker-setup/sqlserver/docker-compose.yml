@@ -10,8 +10,8 @@ services:
     ports:
       - "1433:1433"
     volumes:
-      - ../../schema/university-sqlserver.sql:/university-sqlserver.sql
-      - ../../schema/populate-university-db.sql:/insert-scripts.sql
+      - ../../schema/simple/university-sqlserver.sql:/university-sqlserver.sql
+      - ../../schema/simple/populate-university-db.sql:/insert-scripts.sql
     command: >
       /bin/bash -c "
       /opt/mssql/bin/sqlservr & 
@@ -22,3 +22,16 @@ services:
       while true; do sleep 3600; done
       "
     
+profiles:
+  simple:
+    services:
+      mssql:
+        volumes:
+          - ../../schema/simple/university-sqlserver.sql:/docker-entrypoint-initdb.d/init.sql
+          - ../../schema/simple/populate-university-db.sql:/docker-entrypoint-initdb.d/insert-scripts.sql     
+  full:
+    services:
+      mssql:
+        volumes:
+          - ../../schema/full/university-sqlserver.sql:/docker-entrypoint-initdb.d/init.sql
+          - ../../schema/full/populate-university-db.sql:/docker-entrypoint-initdb.d/insert-scripts.sql   

@@ -1,22 +1,22 @@
 version: '3.8'
 
 services:
-  adminer:
-    extends:
-      file: ./adminer-gui/docker-compose.yml
-      service: adminer
+  # adminer:
+  #   extends:
+  #     file: ./adminer-gui/docker-compose.yml
+  #     service: adminer
 
-  mysql:
-    extends:
-      file: ./mysql/docker-compose.yml
-      service: mysql
+  # mysql:
+  #   extends:
+  #     file: ./mysql/docker-compose.yml
+  #     service: mysql
 
   postgres:
     extends:
       file: ./postgresql/docker-compose.yml
       service: postgres
 
-  mssql:
-    extends:
-      file: ./sqlserver/docker-compose.yml
-      service: mssql
+  # mssql:
+  #   extends:
+  #     file: ./sqlserver/docker-compose.yml
+  #     service: mssql
