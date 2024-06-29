@@ -1,7 +1,7 @@
 ## Set Up
 We can set up the required databases and tools using Docker. We support the usage of PostgreSQL, MySQL and SQL Server databases as docker instances. Moreover, there is a docker setup for [Adminer](https://www.adminer.org/), a web-based simple GUI that can connect all these databases.
 
-### Pre-requisites:
+## Pre-requisites:
 - Docker must be installed
 
 ## Mode / Profile - Database Setup
