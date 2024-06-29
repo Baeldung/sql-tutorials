@@ -6,8 +6,8 @@ We can set up the required databases and tools using Docker. We support the usag
 
 ## Mode / Profile - Database Setup
 This repository provides the setup for two types of modes/profiles. 
-- simple : This mode setup a minimal database structure with only three tables in University database. The scripts for tables in this mode is available under the directory `schema/simple`.
-- full : This mode setup a full database for University, which include minimum of 9 tables. The scripts for tables in this mode is available under the directory `schema/full`.
+- simple : This mode setup a minimal database structure with only three tables in University database. The scripts for tables in this mode is available under the [directory](../schema/simple) `schema/simple`.
+- full : This mode setup a full database for University, which include minimum of 9 tables. The scripts for tables in this mode is available under the [directory](../schema/full) `schema/full`.
 
 ## How to Use?
 The docker configurations are available under the directory `1-setup/docker-setup`. 
