@@ -1,0 +1,1 @@
+SELECT * FROM Exam WHERE EXISTS(SELECT * FROM Department WHERE Exam.id=Department.id);
