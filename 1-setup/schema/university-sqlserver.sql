@@ -1,7 +1,10 @@
 -- SQL script to create DB, and tables. Then insert data in each table
 -- Run these 2 statements in a separate query
-DROP DATABASE IF EXISTS University;
-CREATE DATABASE University;
+IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'University')
+BEGIN
+    CREATE DATABASE University;
+END
+GO
 
 -- Change schema to University
 USE University;
@@ -40,6 +43,7 @@ CREATE TABLE Student
     birth_date DATE,
     enrollment_date DATE,
     graduation_date DATE,
+    gpa FLOAT(4),
     UNIQUE (id)
 );
 
@@ -54,6 +58,7 @@ CREATE TABLE Faculty
     start_date DATE,
     end_date DATE,
     department_id INT,
+    active BIT DEFAULT 1,
     CONSTRAINT faculty_department_id_fkey FOREIGN KEY(department_id) REFERENCES Department(id),
     UNIQUE (id)
 );
