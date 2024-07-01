@@ -9,5 +9,5 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ../../schema/university-postgresql.sql:/docker-entrypoint-initdb.d/init.sql
-      - ../../schema/populate-university-db.sql:/docker-entrypoint-initdb.d/insert-scripts.sql
+      - ../../schema/${PROFILE:-simple}/university-postgresql.sql:/docker-entrypoint-initdb.d/init.sql
+      - ../../schema/${PROFILE:-simple}/populate-university-db.sql:/docker-entrypoint-initdb.d/insert-scripts.sql

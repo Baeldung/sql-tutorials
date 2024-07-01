@@ -10,5 +10,5 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ../../schema/university-mysql.sql:/docker-entrypoint-initdb.d/init.sql
-      - ../../schema/populate-university-db.sql:/docker-entrypoint-initdb.d/insert-scripts.sql
+      - ../../schema/${PROFILE:-simple}/university-mysql.sql:/docker-entrypoint-initdb.d/init.sql
+      - ../../schema/${PROFILE:-simple}/populate-university-db.sql:/docker-entrypoint-initdb.d/insert-scripts.sql

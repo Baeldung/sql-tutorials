@@ -10,8 +10,8 @@ services:
     ports:
       - "1433:1433"
     volumes:
-      - ../../schema/university-sqlserver.sql:/university-sqlserver.sql
-      - ../../schema/populate-university-db.sql:/insert-scripts.sql
+      - ../../schema/${PROFILE:-simple}/university-sqlserver.sql:/university-sqlserver.sql
+      - ../../schema/${PROFILE:-simple}/populate-university-db.sql:/insert-scripts.sql
     command: >
       /bin/bash -c "
       /opt/mssql/bin/sqlservr & 
