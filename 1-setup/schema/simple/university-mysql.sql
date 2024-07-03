@@ -17,17 +17,15 @@ CREATE TABLE Department
 );
 
 
-CREATE TABLE Faculty
+CREATE TABLE Student
 (
-    id INT PRIMARY KEY NOT Null,
+    id INT PRIMARY KEY NOT null,
     name VARCHAR (60),
-    national_id BIGINT NOT Null,
-    position VARCHAR (30),
-    start_date DATE,
-    end_date DATE,
-    department_id INT,
-    active BOOLEAN DEFAULT true,
-    CONSTRAINT faculty_department_id_fkey FOREIGN KEY(department_id) REFERENCES Department(id),
+    national_id BIGINT NOT Null, 
+    birth_date DATE,
+    enrollment_date DATE,
+    graduation_date DATE,
+    gpa FLOAT,
     UNIQUE (id)
 );
 

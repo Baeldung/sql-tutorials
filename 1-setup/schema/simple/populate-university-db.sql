@@ -7,84 +7,32 @@ INSERT INTO Department (id, name, code) VALUES
   (4, 'Civil Engineering', 'CE'),
   (5, 'Mathematics', 'MA'); 
 
-INSERT INTO Faculty (id, name, national_id, position, start_date, end_date, department_id) VALUES
-  (1, 'Anubha Gupta', 1018901231, 'Professor', '2010-1-11', '2027-3-11', 2),
-  (2, 'Anubha Gupta', 1018901231, 'Associate Professor', '2007-1-9', '2010-1-10', 2),
-  (3, 'Anubha Gupta', 1018901231, 'Assistant Professor', '2004-5-11', '2007-1-8', 2),
-  (21, 'Peter Pan', 2130989011, 'Professor', '2007-5-11', NULL, 2),
-  (22, 'Peter Pan', 2130989011, 'Associate Professor', '2004-7-11', '2007-5-10', 2),
-  (23, 'Peter Pan', 2130989011, 'Assistant Professor', '2001-5-11', '2004-7-10', 2),
-  (33, 'Nando de Fretas', 3130901341, 'Associate Professor', '2023-3-11', '2025-4-8', 2),
-  (34, 'Nando de Fretas', 3130901341, 'Assistant Professor', '2020-5-17', '2023-3-10', 2),
-  (41, 'Robert Ludloo', 3031201441, 'Assistant Professor', '2017-5-11', NULL, 2),
-  (42, 'Robert Ludloo', 3031201441, 'Teaching Assistant', '2014-5-11', '2017-5-10', 2),
-  (51, 'Vikram Goyal', 6541236090, 'Professor', '2016-1-11', NULL, 2),
-  (52, 'Vikram Goyal', 6541236090, 'Associate Professor', '2012-3-20', '2016-3-10', 2),
-  (53, 'Vikram Goyal', 6541236090, 'Assistant Professor', '2009-3-12', '2012-3-19', 2),
-  (54, 'Vikram Goyal', 6541236090, 'Teaching Assistant', '2006-1-11', '2009-3-11', 2),
-  (100, 'Score Koli', 3221114041, 'Teaching Assistant', '2021-1-11', '2023-3-20', 2),
-  (101, 'Schroger Ken', 3251113041, 'Teaching Assistant', '2023-1-3', NULL, 2),
-  (102, 'Schidt Kraus', 3112124041, 'Teaching Assistant', '2022-1-11', NULL, 2),
-
-  (111, 'AV Subramanium', 1340902317, 'Assistant Professor', '2011-5-11', NULL, 1),
-  (121, 'Risa Sodi', 1409239017, 'Associate Professor', '2010-1-11', NULL, 1),
-  (122, 'Risa Sodi', 1409239017, 'Assistant Professor', '2008-4-8', '2010-1-10', 1),
-  (131, 'Wlliam Liu', 231456789, 'Professor', '2015-5-12', NULL, 1),
-  (132, 'Wlliam Liu', 231456789, 'Associate Professor', '2009-2-11', '2015-5-11', 1),
-  (133, 'Wlliam Liu', 231456789, 'Assistant Professor', '2006-3-22', '2009-2-10', 1),
-  (134, 'Wlliam Liu', 231456789, 'Teaching Assistant', '2003-5-11', '2006-3-21', 1),
-  (221,  'Cormen Qiu', 1040902317, 'Professor', '2013-3-11', NULL, 1),
-  (225, 'Ajit Singh', 1302632117, 'Assistant Professor', '2012-5-11', '2024-6-8', 1),
-  (226, 'Ajit Singh', 1302632117, 'Teaching Assistant', '2009-5-11', '2012-5-10', 1),
-  (227, 'Sam Wilson', 3021632117, 'Professor', '2021-5-11', NULL, 1),
-  (228, 'Sam Wilson', 3021632117, 'Associate Professor', '2018-2-10', '2021-5-10', 1),
-  (229, 'Liu Lian', 2163202117, 'Associate Professor', '2019-2-10', NULL, 1),
-  (230, 'Kiu Chi', 3163218917, 'Assistant Professor', '2020-12-10', NULL, 1),
-
-  (300, 'Milos Simic', 9875511222, 'Teaching Assistant', '2022-4-11', NULL, 1),
-  (301, 'Ritu Jain', 1347551122, 'Teaching Assistant', '2022-4-11', '2024-12-19', 1),
-  (302, 'Reera Soi', 7309551122, 'Teaching Assistant', '2022-7-10', '2023-12-23', 1),
-  (303, 'Michael Albin', 3147551122, 'Teaching Assistant', '2022-4-11', '2025-12-12', 1),
-  (304, 'Tahir Hussain', 8569551122, 'Teaching Assistant', '2021-12-10', NULL, 1),
-  (305, 'Michael Albin', 5637551122, 'Teaching Assistant', '2021-4-11', '2025-12-12', 1),  
-
-  (401, 'Vini Joseph', 9028291011, 'Professor', '2015-2-12', NULL, 3),
-  (402, 'Vini Joseph', 9028291011, 'Associate Professor', '2015-2-11', '2012-9-9', 3),
-  (421, 'Brandon Fraser', 2314561011, 'Assistant Professor', '2013-8-11', NULL, 3),
-  (431, 'Thomas Cook', 7734139012, 'Associate Professor', '2016-10-11', NULL, 3),
-  (432, 'Thomas Cook', 7734139012, 'Assistant Professor', '2013-3-11', '2016-10-10', 3), 
-  (441, 'Steven Joe', 1567230978, 'Professor', '2019-9-11', NULL, 3),
-  (451, 'Rick Ponting', 6605504403, 'Assistant Professor', '2020-11-11', NULL, 3),
-  (510, 'Ranold Krose', 2314553301, 'Teaching Assistant', '2021-9-11', NULL, 3),
-  (511, 'Rini Sen', 1423553301, 'Teaching Assistant', '2022-6-11', NULL, 3),
-  (512, 'Casper Jones', 4253513301, 'Teaching Assistant', '2021-4-11', NULL, 3),
-  
-  (601, 'Sussie Smith', 1657230918, 'Professor', '2019-1-11', '2027-2-18', 5),
-  (602, 'Sussie Smith', 1657230918, 'Associate Professor', '2015-10-11', '2019-1-10', 5),
-  (603, 'Sussie Smith', 1657230918, 'Assistant Professor', '2012-1-9', '2015-10-10', 5),
-  (621, 'Badrinath Ho', 2010111987, 'Professor', '2016-3-11', NULL, 5),
-  (631, 'Theiry Kerry', 2110118447, 'Associate Professor', '2019-4-11', NULL, 5),
-  (641, 'Steve Joseph', 1314567655, 'Assistant Professor', '2021-6-23', NULL, 5),
-  (642, 'Steve Joseph', 1314567655, 'Teaching Assistant', '2019-3-11', '2021-6-23', 5),  
-  (651, 'Rina Anderson', 1902341504, 'Assistant Professor', '2020-9-11', '2026-7-8', 5),
-  (652, 'Rina Anderson', 1902341504, 'Teaching Assistant', '2017-9-11', '2020-9-10', 5),
-  (671, 'Rosita Klaus', 1234015024,  'Teaching Assistant', '2023-1-8', '2024-2-2', 5),
-  (672, 'Ballu Singh', 2134105024,  'Teaching Assistant', '2022-12-11', '2024-2-2', 5),
-  (673, 'Rory Ross', 4021351024,  'Teaching Assistant', '2022-11-11', '2024-2-2', 5),
-
-  (681, 'Vin Diesel', 1331405624, 'Professor', '2014-1-11', NULL, 4),
-  (682, 'Vin Diesel', 1331405624, 'Associate Professor', '2009-1-11', '2014-1-10', 4),
-  (691, 'Brandon Ford', 2131435609, 'Assistant Professor', '2013-1-11', NULL, 4),
-  (703, 'Thor Cookie', 1112125129, 'Associate Professor', '2016-1-11', NULL, 4),
-  (724, 'Stove Joseph', 1010101332, 'Professor', '2019-1-11', '2025-2-8', 4),
-  (725, 'Stove Joseph', 1010101332, 'Associate Professor', '2015-12-10', '2019-1-10', 4),
-  (726, 'Stove Joseph', 1010101332, 'Assistant Professor', '2011-2-9', '2015-12-9', 4),
-  (727, 'Stove Joseph', 1010101332, 'Teaching Assistant', '2008-3-11', '2011-2-8', 4),
-  (715, 'Ron Parry', 2032145096, 'Assistant Professor', '2020-1-11', NULL, 4),
-  (716, 'Ron Parry', 2032145096, 'Teaching Assistant', '2018-1-09', '2020-1-10', 4),
-  (739, 'Karen Walter', 2314657876, 'Teaching Assistant', '2022-11-11', NULL, 4),
-  (740, 'Kira Wass', 2314623876, 'Teaching Assistant', '2021-9-11', NULL, 4),
-  (741, 'Sophia Ker', 2314437876, 'Teaching Assistant', '2022-8-11', NULL, 4);
+INSERT INTO Student (id, name, national_id, birth_date, enrollment_date, graduation_date, gpa) VALUES
+  (1001, 'John Liu', 123345566, '2001-04-05', '2020-01-15', '2024-06-15', 4),
+  (1003, 'Rita Ora', 132345166, '2001-01-14', '2020-01-15', '2024-06-15', 4.2),
+  (1007, 'Philip Lose', 321345566, '2001-06-15', '2020-01-15', '2024-06-15', 3.8),
+  (1010, 'Samantha Prabhu', 3217165566, '2001-03-21', '2020-01-15', '2024-06-15', 4.9),
+  (1011, 'Vikas Jain', 321345662, '2001-7-18', '2020-01-15', NULL, 3.3),
+  (1610, 'Ritu Raj', 3203455662, '2002-2-05', '2021-01-15', '2025-06-15', NULL),
+  (1607, 'Peter Liu',3043455662, '2002-4-14', '2021-01-15', '2025-06-15', NULL),
+  (1617, 'Philip Mohan', 3103455662, '2002-5-15', '2021-01-15', '2025-06-15', 5),
+  (1619, 'Sam Roberts', 9203455662, '2002-6-21', '2021-01-15', '2025-06-15', 4.3),
+  (1621, 'Vineet Jha', 7203421662, '2002-05-18', '2021-01-15', NULL, 2.9),
+  (2001, 'Reena Roy', 9023455613, '2003-01-13', '2022-01-15', '2025-06-15', 4.15),
+  (2009, 'Pollards Grey', 6503453662, '2003-4-19', '2022-01-15', '2025-06-15', 4.65),
+  (2017, 'Potu Singh', 1312445677, '2003-3-11', '2022-01-15', NULL, NULL),
+  (2008, 'Julia Roberts', 1212446677, '2003-6-12', '2022-01-15', '2025-06-15', 3.04),
+  (2006, 'Agatha Christi', 1100245767,  '2003-05-19', '2022-01-15', NULL, 4.59),
+  (1101, 'Jia Grey', 1345236267, '2001-02-05', '2020-01-15', '2024-06-15', 3.98),
+  (1103, 'Rose Rit', 1323612067, '2001-05-14', '2020-01-15', NULL, 3.57),
+  (1107, 'Phellum Luis', 203678911, '2001-3-15', '2020-01-15', '2024-06-15', 4.21),
+  (1110, 'Albert Decosta', 2617897011, '2001-2-21', '2020-01-15', '2024-06-15', 4),
+  (1111, 'Vikram Kohli', 1516578091, '2001-3-8', '2020-01-15', '2024-06-15', 3.27),
+  (1710, 'Roni Roto', 2678910631, '2002-3-11', '2021-01-15', '2025-06-15', 4.44),
+  (1707, 'Piu Liu', 2101368101, '2002-3-14', '2021-01-15', NULL, 2.99),
+  (1717, 'Param Mohan', 1023456545, '2002-5-15', '2021-01-15', '2025-06-15', 2.75),
+  (1719, 'Siren Lobo', 189091342, '2002-6-17', '2021-01-15', NULL, NULL),
+  (1721, 'Vini Puh', 1312091343, '2002-5-13', '2021-01-15', '2025-06-15', 3.64);
 
 -- Insert in Course for CS
 INSERT INTO Course (id, name, textbook, credits, is_active, department_id) VALUES
@@ -194,6 +142,6 @@ INSERT INTO Course (id, name, textbook, credits, is_active, department_id) VALUE
 
 SELECT * from Department;
 
-SELECT * from Faculty;
+SELECT * from Student;
 
 SELECT * from Course;
