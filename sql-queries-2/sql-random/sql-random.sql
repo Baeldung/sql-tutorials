@@ -1,5 +1,3 @@
-SELECT * 
-  FROM Faculty;
 
 SELECT * 
   FROM Faculty 
