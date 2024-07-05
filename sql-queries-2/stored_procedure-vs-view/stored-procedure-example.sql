@@ -13,8 +13,6 @@ $$;
 
 CALL UpdateStudentGPA(1001, 4.5);
 
-CALL UpdateStudentGPA(1001, 4.5);
-
 SELECT id, name, gpa 
 FROM Student 
 WHERE id = 1001;
