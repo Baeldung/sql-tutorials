@@ -4,7 +4,6 @@
 DROP DATABASE IF EXISTS University;
 
 -- Create the new Database
--- Run the CREATE statment by itself
 CREATE DATABASE University ENCODING 'UTF8';
 
 -- Select the new university database and open a new query
@@ -12,7 +11,6 @@ CREATE DATABASE University ENCODING 'UTF8';
 SET SCHEMA 'public';
 
 -- Create Tables
--- I have assumed all ids to be INTEGERS instead of VARCHAR 
 
 CREATE TABLE Department
 (

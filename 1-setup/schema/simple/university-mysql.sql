@@ -6,7 +6,6 @@ CREATE DATABASE University DEFAULT CHARACTER SET=utf8;
 USE University;
 
 -- Create Tables
--- I have assumed all ids to be INTEGERS instead of VARCHAR 
 
 CREATE TABLE Department
 (
