@@ -1,6 +1,4 @@
-This project contains SQL files that support the tutorials on https://www.baeldung.com/sql/ 
-
-To setup the database on your local system, **go to the folder "1-setup"**. There are two methods you can use:
-- manual setup - go to the [manual-setup](1-setup/manual-setup) folder, and select the file for the respective database technology and follow the instructions there
-- docker setup - go to the [docker-setup](1-setup/docker-setup) folder and follow the instructions in the readme file
-
+### Relevant Articles: 
+- [How to Use Condition in Count in SQL](https://www.baeldung.com/sql/count-conditional-aggregation)
+- [Get Current Timestamp in SQL Server](https://www.baeldung.com/sql/sql-server-current-timestamp)
+- [How to Check if a Record Exists in SQL](https://www.baeldung.com/sql/how-to-check-if-…rd-exists-in-sql)
