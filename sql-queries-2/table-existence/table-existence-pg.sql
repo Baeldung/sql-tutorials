@@ -1,0 +1,11 @@
+SELECT EXISTS ( 
+    SELECT FROM information_schema.tables 
+    WHERE table_schema = 'public' 
+    AND table_name = 'student' 
+);
+
+SELECT EXISTS ( 
+    SELECT 1 FROM pg_tables 
+    WHERE schemaname = 'public' 
+    AND tablename = 'student' 
+);
