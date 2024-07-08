@@ -9,3 +9,4 @@ SELECT EXISTS (
     WHERE schemaname = 'public' 
     AND tablename = 'student' 
 );
+SELECT COALESCE(to_regclass('public.test_test_id_seq1') IS NOT NULL, FALSE);
