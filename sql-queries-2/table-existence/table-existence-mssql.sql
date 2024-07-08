@@ -1,7 +1,7 @@
 IF EXISTS ( 
-    SELECT 1 FROM INFORMATION_SCHEMA.TABLES 
-    WHERE TABLE_SCHEMA='dbo' 
-    AND TABLE_NAME='student' 
+    SELECT 1 FROM information_schema.tables 
+    WHERE table_schema='dbo' 
+    AND table_name='student' 
 ) SELECT 1 ELSE SELECT 0;
 
 IF EXISTS ( 
