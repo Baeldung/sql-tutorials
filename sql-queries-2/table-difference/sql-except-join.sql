@@ -10,19 +10,13 @@ SELECT *
     SELECT * 
     FROM updated_department;
 
-SELECT dep.*, fac.* 
-  FROM faculty fac 
-  LEFT JOIN department dep 
+SELECT fac.id as faculty_id, fac.name as faculty_name, fac.position, dep.name as department, dep.code as code, dep.id as dept_id, fac.start_date, fac.end_date 
+    FROM Faculty fac 
+    LEFT JOIN Department dep 
     ON dep.id = fac.department_id;
 
-SELECT dep.*, fac.* 
-  FROM faculty fac 
-  LEFT JOIN department dep 
+SELECT fac.id as faculty_id, fac.name as faculty_name, fac.position, dep.name as department, dep.code as code, dep.id as dept_id, fac.start_date, fac.end_date 
+    FROM Faculty fac 
+    LEFT JOIN Department dep 
     ON dep.id = fac.department_id 
-    WHERE fac.end_date IS NULL;
-
-SELECT dep.*, fac.* 
-  FROM faculty fac 
-  LEFT JOIN department dep 
-    ON dep.id = fac.department_id 
-    WHERE fac.end_date IS NOT NULL;
+        WHERE fac.end_date IS NULL;
