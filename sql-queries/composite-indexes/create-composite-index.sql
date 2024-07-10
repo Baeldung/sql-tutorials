@@ -1,0 +1,1 @@
+CREATE INDEX idx_name_enrollment ON Student (name, enrollment_date);
