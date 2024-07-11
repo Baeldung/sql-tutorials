@@ -1,0 +1,3 @@
+SELECT TOP 1 * 
+  FROM Faculty 
+  ORDER BY NEWID();
