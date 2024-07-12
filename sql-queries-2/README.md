@@ -5,3 +5,4 @@
 - [Set Default Values for Columns in SQL](https://www.baeldung.com/sql/column-default-value)
 - [Finding the Maximum Value Across Multiple Columns in SQL](https://www.baeldung.com/sql/max-several-columns)
 - [Difference Between Stored Procedure and View](https://www.baeldung.com/sql/stored-procedure-vs-view)
+- [Update Data From One SQL Table to Another Based on ID Match](https://www.baeldung.com/sql/update-data-id-match)
