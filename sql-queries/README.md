@@ -7,3 +7,5 @@
 - [Matching Multiple Patterns in Queries](https://www.baeldung.com/sql/match-multiple-patterns)
 - [Identifying Tables Containing a Specific Column Name](https://www.baeldung.com/sql/find-table-with-column-name)
 - [Find Null or Empty Values in SQL](https://www.baeldung.com/sql/select-null-empty-strings)
+- [Difference Between WHERE Clause and ON Clause in JOIN](https://www.baeldung.com/sql/join-where-clause-vs-on)
+- [Difference Between HAVING and WHERE in SQL](https://www.baeldung.com/sql/having-vs-where)
