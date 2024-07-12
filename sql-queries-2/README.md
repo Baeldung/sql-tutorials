@@ -10,3 +10,4 @@
 - [Dropping All Database Tables in One SQL Query](https://www.baeldung.com/sql/drop-every-table-single-query)
 - [Difference Between JOIN and UNION in SQL](https://www.baeldung.com/sql/join-vs-union)
 - [Generating a Range of Numbers Between Two Values in SQL](https://www.baeldung.com/sql/generate-interval-numbers)
+- [Check if a Table Exists in a Given Schema in SQL](https://www.baeldung.com/sql/check-table-existence-particular-schema)
