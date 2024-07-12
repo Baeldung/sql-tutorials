@@ -8,3 +8,4 @@
 - [Update Data From One SQL Table to Another Based on ID Match](https://www.baeldung.com/sql/update-data-id-match)
 - [Difference Between CHAR, NCHAR, VARCHAR, and NVARCHAR in SQL Server](https://www.baeldung.com/sql/sql-server-char-nchar-varchar-nvarchar)
 - [Dropping All Database Tables in One SQL Query](https://www.baeldung.com/sql/drop-every-table-single-query)
+- [Difference Between JOIN and UNION in SQL](https://www.baeldung.com/sql/join-vs-union)
