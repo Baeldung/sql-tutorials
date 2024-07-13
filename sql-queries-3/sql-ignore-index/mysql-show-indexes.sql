@@ -1,0 +1,2 @@
+SHOW INDEXES 
+FROM Program;
