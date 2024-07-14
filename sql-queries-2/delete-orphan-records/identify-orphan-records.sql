@@ -1,3 +1,3 @@
 SELECT * 
-FROM Student 
-WHERE id NOT IN (SELECT id FROM Department);
+FROM Registration 
+WHERE student_id NOT IN ( SELECT student_id FROM Students );
