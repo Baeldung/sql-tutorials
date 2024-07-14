@@ -1,2 +1,2 @@
-DELETE FROM Student 
-WHERE NOT EXISTS ( SELECT 1 FROM Department WHERE Department.id = Student.id);
+DELETE FROM Registration 
+WHERE NOT EXISTS ( SELECT 1 FROM Students WHERE Students.student_id = Registration.student_id );
