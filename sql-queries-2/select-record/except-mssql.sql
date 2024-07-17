@@ -1,5 +1,5 @@
-SELECT id, name, textbook, credits, is_active, department_id
-FROM Course
+SELECT c.id, c.name, c.textbook, c.credits, c.is_active, c.department_id
+FROM Course c
 EXCEPT
 SELECT c.id, c.name, c.textbook, c.credits, c.is_active, c.department_id
 FROM Course c
