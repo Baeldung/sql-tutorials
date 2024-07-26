@@ -1,4 +1,4 @@
-SELECT * FROM Altitude ORDER BY CAST(altitude AS INT);
+SELECT * FROM Exam ORDER BY CAST(attendance_points AS INT);
 
-SELECT * FROM Altitude ORDER BY altitude::INT;
+SELECT * FROM Exam ORDER BY attendance_points::INT;
 

@@ -1,6 +1,8 @@
-CREATE TABLE Altitude( 
-    id INT PRIMARY KEY, 
-    altitude VARCHAR(10) 
-);
+ALTER TABLE Exam ADD attendance_points VARCHAR(10);
+DELETE FROM Exam WHERE id > 4;
+UPDATE Exam SET attendance_points = '100' WHERE id=1;
+UPDATE Exam SET attendance_points = '-25' WHERE id=2;
+UPDATE Exam SET attendance_points = '45' WHERE id=3;
+UPDATE Exam SET attendance_points = '-99' WHERE id=4;
 
-INSERT INTO Altitude VALUES (1, '100'), (2, '-25'), (3, '45'), (4, '-99');
+SELECT id, attendance_points FROM Exam; 

@@ -1,5 +1,5 @@
-SELECT * FROM Altitude ORDER BY CAST(altitude AS INT);
+SELECT * FROM Exam ORDER BY CAST(attendance_points AS INT);
 
-SELECT * FROM Altitude ORDER BY CONVERT(INT, altitude);
+SELECT * FROM Exam ORDER BY CONVERT(INT, attendance_points);
 
-SELECT * FROM Altitude ORDER BY altitude+0;
+SELECT * FROM Exam ORDER BY attendance_points+0;
