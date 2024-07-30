@@ -1,3 +1,3 @@
-START TRANSACTION;
+START TRANSACTION; -- Start a transaction
 //SQL statements
-COMMIT RELEASE;
+COMMIT RELEASE; -- Commit transaction and disconnect user session
