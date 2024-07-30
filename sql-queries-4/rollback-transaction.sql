@@ -1,0 +1,6 @@
+START TRANSACTION;
+DELETE 
+FROM Prerequisite;
+SELECT * 
+FROM Prerequisite;
+ROLLBACK;
