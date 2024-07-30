@@ -1,4 +1,6 @@
-START TRANSACTION;
+START TRANSACTION; -- Start a transaction
+
+/* Add some data to the Department table */
 INSERT 
 INTO Department 
 VALUES(6,'Data Science','DS');
@@ -14,4 +16,5 @@ VALUES(9,'Information Science','IS');
 INSERT 
 INTO Department 
 VALUES(10,'Statistics','S');
-COMMIT;
+
+COMMIT; -- Commit the transaction
