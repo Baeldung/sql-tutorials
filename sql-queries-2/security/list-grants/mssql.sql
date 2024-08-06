@@ -4,4 +4,4 @@ SELECT
     USER_NAME(dp.grantee_principal_id) AS grantee,
     dp.permission_name, dp.state_desc
 FROM sys.database_permissions dp
-WHERE USER_NAME(dp.grantee_principal_id) = 'demo_user';
+WHERE USER_NAME(dp.grantee_principal_id) IN ('demo_user', 'demo_read_only_user');
