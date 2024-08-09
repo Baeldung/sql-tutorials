@@ -1,0 +1,1 @@
+ALTER TABLE Student DROP COLUMN created_at; 
