@@ -24,3 +24,32 @@ USING (
     WHERE t.rn > 1
 ) duplicate
 WHERE Registration.id = duplicate.id;
+
+-- Remove Duplicates Without a Unique Identifier 
+
+-- Removing with CTE and USING clause
+WITH RankedStudentRegistration AS ( 
+    SELECT semester, year, course_id, student_id,
+      ROW_NUMBER() OVER (
+        PARTITION BY semester, year, reg_datetime, course_id, student_id
+        ORDER BY (SELECT NULL)
+      ) AS rn
+    FROM Registration
+)
+
+DELETE FROM Registration
+USING RankedStudentRegistration
+WHERE (
+    Registration.semester = RankedStudentRegistration.semester
+    AND Registration.year = RankedStudentRegistration.year
+    AND Registration.course_id = RankedStudentRegistration.course_id
+    AND Registration.student_id = RankedStudentRegistration.student_id
+    AND RankedStudentRegistration.rn > 1
+);
+
+-- Removing using ctid system column
+DELETE FROM Registration
+WHERE ctid NOT IN (
+    SELECT MIN(ctid) FROM Registration
+    GROUP BY semester, year, course_id, student_id, reg_datetime
+);
