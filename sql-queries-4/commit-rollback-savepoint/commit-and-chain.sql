@@ -1,3 +1,3 @@
 START TRANSACTION; -- Start a new transaction
-//SQL Work
+//SQL Statements
 COMMIT AND CHAIN; -- Commit and chain a transaction
