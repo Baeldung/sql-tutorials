@@ -19,3 +19,25 @@ WITH COUNTED_DUPLICATES AS (
 )
 DELETE FROM COUNTED_DUPLICATES
 WHERE rn > 1;
+
+
+-- Remove Duplicates Without a Unique Identifier 
+
+-- Removing with CTE and Inner Join
+WITH RankedStudentRegistration AS (
+    SELECT semester, year, course_id, student_id, 
+      ROW_NUMBER() OVER (
+        PARTITION BY semester, year, reg_datetime, course_id, student_id
+        ORDER BY (SELECT NULL)
+      ) AS rn
+    FROM Registration
+)
+
+DELETE Registration FROM Registration
+INNER JOIN RankedStudentRegistration
+ON
+   Registration.semester = RankedStudentRegistration.semester
+   AND Registration.year = RankedStudentRegistration.year
+   AND Registration.course_id = RankedStudentRegistration.course_id
+   AND Registration.student_id = RankedStudentRegistration.student_id
+WHERE RankedStudentRegistration.rn > 1;
