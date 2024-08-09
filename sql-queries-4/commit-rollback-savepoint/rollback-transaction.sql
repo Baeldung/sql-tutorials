@@ -1,7 +1,7 @@
 START TRANSACTION; -- Start a transaction
 
-/* Delete Data from  Prerequisite */
+/* Delete Data from  Department */
 DELETE 
-FROM Prerequisite;
+FROM Department;
 
 ROLLBACK; -- Rollback the transaction
