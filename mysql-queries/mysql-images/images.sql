@@ -1,6 +1,4 @@
 -- SQL Script for the article Images in MySQL
--- DROP DATABASE IF EXISTS University;
-CREATE DATABASE University DEFAULT CHARACTER SET=UTF8MB4; 
 
 -- Change schema to University
 USE University;
@@ -89,10 +87,4 @@ UPDATE StudentComplete SET profile_pic_path='/usr/local/mysql/data/philip_pp.jpe
 UPDATE StudentComplete SET profile_pic_path='/usr/local/mysql/data/samantha_pp.jpeg' WHERE name ='Samantha Prabhu'; 
 UPDATE StudentComplete SET profile_pic_path='/usr/local/mysql/data/vikas_pp.jpeg' WHERE name ='Vikas Jain'; 
 
-SELECT * from DepartmentComplete;
-
-SELECT * from StudentComplete;
-
 -- END
-
-
