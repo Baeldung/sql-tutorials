@@ -9,6 +9,16 @@ WHERE id = 2;
 SELECT id, name, info FROM Departments WHERE id = 2;
 
 UPDATE Departments 
+SET info = JSON_REPLACE(info, '$.dean', 'Dr. Brown') 
+WHERE id = 2;
+SELECT id, name, info FROM Departments WHERE id = 2;
+
+UPDATE Departments 
+SET info = JSON_SET(info, '$.dean', 'Dr. Brown') 
+WHERE id = 2;
+SELECT id, name, info FROM Departments WHERE id = 2;
+
+UPDATE Departments 
 SET info = JSON_REMOVE(info, '$.courses')
 WHERE id = 3;
 SELECT id, name, info FROM Departments WHERE id = 3;
