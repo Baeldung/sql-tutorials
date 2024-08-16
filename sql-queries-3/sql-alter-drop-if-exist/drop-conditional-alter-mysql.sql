@@ -13,10 +13,7 @@ BEGIN
 
     -- If the column exists, drop it
     IF column_exists > 0 THEN
-        SET @sql = 'ALTER TABLE Student DROP COLUMN national_id';
-        PREPARE stmt FROM @sql;
-        EXECUTE stmt;
-        DEALLOCATE PREPARE stmt;
+        ALTER TABLE Student DROP COLUMN national_id;
     END IF;
 END //
 
