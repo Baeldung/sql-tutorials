@@ -1,4 +1,7 @@
-DELETE Student 
-FROM Student 
-LEFT JOIN Department ON Student.id = Department.id 
-WHERE Department.id IS NULL;
+DELETE FROM Registration
+WHERE student_id IN (
+    SELECT Registration.student_id
+    FROM Registration
+    LEFT JOIN Students ON Registration.student_id = Students.student_id
+    WHERE Students.student_id IS NULL
+);
