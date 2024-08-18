@@ -13,3 +13,4 @@
 - [Check if a Table Exists in a Given Schema in SQL](https://www.baeldung.com/sql/check-table-existence-particular-schema)
 - [How to Select a Date Without Including the Time in SQL](https://www.baeldung.com/sql/select-date-without-time)
 - [How to Restrict Results to Top N Rows per Group in SQL](https://www.baeldung.com/sql/top-n-rows-window-functions)
+- [How to List ALL Grants of a User in SQL](https://www.baeldung.com/sql/show-all-grants-user)
