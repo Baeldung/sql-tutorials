@@ -9,6 +9,7 @@
 - [Difference Between JOIN and UNION in SQL](https://www.baeldung.com/sql/join-vs-union)
 - [Generating a Range of Numbers Between Two Values in SQL](https://www.baeldung.com/sql/generate-interval-numbers)
 - [Check if a Table Exists in a Given Schema in SQL](https://www.baeldung.com/sql/check-table-existence-particular-schema)
+- [Running a Query With LIMIT/OFFSET While Still Getting the Total Row Count](https://www.baeldung.com/sql/limit-offset-include-total-row-count)
 - [Deleting SQL Rows Where IDs Do Not Have a Match From Another Table](https://www.baeldung.com/sql/delete-rows-ids-not-match-other-table)
 - [Dropping All Database Tables in One SQL Query](https://www.baeldung.com/sql/drop-every-table-single-query)
 - [Delete Using INNER JOIN in SQL](https://www.baeldung.com/sql/delete-inner-join)
