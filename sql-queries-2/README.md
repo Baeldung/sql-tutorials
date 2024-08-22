@@ -12,3 +12,4 @@
 - [Dropping All Database Tables in One SQL Query](https://www.baeldung.com/sql/drop-every-table-single-query)
 - [Delete Using INNER JOIN in SQL](https://www.baeldung.com/sql/delete-inner-join)
 - [How to Retrieve a Random Row in SQL](https://www.baeldung.com/sql/random-row-select)
+- [How to Join on the Same Table Twice in SQL](https://www.baeldung.com/sql/join-same-table-twice)
