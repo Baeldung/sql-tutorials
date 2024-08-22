@@ -11,3 +11,4 @@
 - [Check if a Table Exists in a Given Schema in SQL](https://www.baeldung.com/sql/check-table-existence-particular-schema)
 - [Dropping All Database Tables in One SQL Query](https://www.baeldung.com/sql/drop-every-table-single-query)
 - [Delete Using INNER JOIN in SQL](https://www.baeldung.com/sql/delete-inner-join)
+- [How to Retrieve a Random Row in SQL](https://www.baeldung.com/sql/random-row-select)
