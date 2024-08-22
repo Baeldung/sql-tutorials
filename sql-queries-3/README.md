@@ -6,3 +6,7 @@
 - [Dropping a Database Table if It Exists in SQL](https://www.baeldung.com/sql/drop-table-if-exists)
 - [How to Remove Duplicate Rows in SQL](https://www.baeldung.com/sql/duplicate-removal)
 - [How to Parameterize an SQL IN Clause](https://www.baeldung.com/sql/parameterize-in-clause)
+- [Comments in MySQL](https://www.baeldung.com/sql/mysql-comments-single-line-multiline-hint)
+- [How to Count the Number of Distinct Values in a SQL Column](https://www.baeldung.com/sql/count-distinct-values)
+- [How to Combine Data From Multiple Tables Using an SQL Joins](https://www.baeldung.com/sql/join-data-multiple-tables)
+- [How to Restrict Results to Top N Rows per Group in SQL](https://www.baeldung.com/sql/top-n-rows-window-functions)
