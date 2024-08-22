@@ -1,6 +1,7 @@
 ### Relevant Articles: 
 - [How to Ignore an Index From Being Used in SQL](https://drafts.baeldung.com/sql/how-to-ignore-an-index-from-being-used-in-sql/)
 - [DELETE With a SELECT Statement in the WHERE Clause](https://www.baeldung.com/sql/delete-select-where-condition)
+- [How to Fetch Maximum Value for Each Group Using SQL](https://www.baeldung.com/sql/max-value-per-group)
 - [Order String as Number in SQL](https://www.baeldung.com/sql/order-string-as-number)
 - [Transactions vs Locking Tables in SQL](https://www.baeldung.com/sql/transactions-vs-locking-tables)
 - [Concatenate with NULL Values in SQL](https://www.baeldung.com/sql/concatenate-null)
