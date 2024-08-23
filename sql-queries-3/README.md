@@ -1,6 +1,7 @@
 ### Relevant Articles: 
 - [How to Ignore an Index From Being Used in SQL](https://drafts.baeldung.com/sql/how-to-ignore-an-index-from-being-used-in-sql/)
 - [DELETE With a SELECT Statement in the WHERE Clause](https://www.baeldung.com/sql/delete-select-where-condition)
+- [Using ALTER to Drop a Column Only if the Column Exists in SQL](https://www.baeldung.com/sql/drop-column-if-exists)
 - [Merging Two Rows in SQL](https://www.baeldung.com/sql/merge-two-records)
 - [Deleting All Records Except the Top or Bottom N in SQL](https://www.baeldung.com/sql/delete-rows-except-first-last-few)
 - [How to Fetch Maximum Value for Each Group Using SQL](https://www.baeldung.com/sql/max-value-per-group)
