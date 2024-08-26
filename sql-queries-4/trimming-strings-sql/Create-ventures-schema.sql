@@ -8,11 +8,11 @@ CREATE TABLE Ventures (
 -- Inserting the data into the table created above
 INSERT INTO Ventures (id, employee_name, job_title) 
 VALUES 
-(1, ' John Doe ', ' Software Engineer '), 
-(2, ' Jane Smith', 'Project Manager '), 
-(3, ' Robert ', ' QA Tester'), 
-(4, 'Alice Johnson ', ' Data Analyst '), 
-(5, ' Michael Brown', ' DevOps Engineer');
+(1, '     John Doe    ', '    Software Engineer    '), 
+(2, '   Jane Smith', 'Project Manager    '), 
+(3, ' Robert      ', '    QA Tester'), 
+(4, 'Alice Johnson    ', '    Data Analyst  '), 
+(5, '    Michael Brown', '    DevOps Engineer');
 
 -- Viewing the table data 
 SELECT * FROM Ventures;
