@@ -1,0 +1,1 @@
+SHOW KEYS FROM Student WHERE Key_name = 'PRIMARY';
