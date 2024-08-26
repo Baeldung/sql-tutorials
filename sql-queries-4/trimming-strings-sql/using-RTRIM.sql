@@ -1,0 +1,1 @@
+SELECT RTRIM('               Hello World              ') AS TrimmedString;
