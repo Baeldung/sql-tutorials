@@ -6,4 +6,4 @@ FOREIGN KEY (department_id) REFERENCES department(id);
 
 --removing a foreign key constraint from an existing table
 ALTER TABLE student
-DROP FOREIGN KEY fk_student_department;
+DROP CONSTRAINT fk_student_department;
