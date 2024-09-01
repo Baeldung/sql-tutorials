@@ -1,0 +1,12 @@
+ALTER TABLE Student ADD COLUMN formatted_id VARCHAR(10);
+
+UPDATE Student
+SET formatted_id = CASE 
+    WHEN id < 1000 THEN CONCAT('000', id)
+    ELSE CONCAT('0', id)
+END
+WHERE id <= 2000;
+
+UPDATE Student
+SET formatted_id = id
+WHERE formatted_id IS NULL;
