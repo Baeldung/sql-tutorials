@@ -1,0 +1,1 @@
+SELECT * FROM Student WHERE YEAR(STR_TO_DATE(enrollment_date, '%d-%m-%Y')) = 2021 AND MONTH(STR_TO_DATE(enrollment_date, '%d-%m-%Y')) BETWEEN 1 AND 5
