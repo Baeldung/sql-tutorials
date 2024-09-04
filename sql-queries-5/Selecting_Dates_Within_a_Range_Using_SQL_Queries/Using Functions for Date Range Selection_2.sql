@@ -1,0 +1,1 @@
+SELECT * FROM Student WHERE MONTH(enrollment_date) = 01 AND YEAR(enrollment_date) = 2021

@@ -1,0 +1,1 @@
+SELECT * FROM Student WHERE enrollment_date >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
