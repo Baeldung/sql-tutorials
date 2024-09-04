@@ -11,3 +11,5 @@ SET @@SESSION.autocommit = 'ON';
 
 SET LOCAL autocommit = 'ON';
 SET @@LOCAL.autocommit = 'ON';
+
+SELECT @@autocommit; --Query autocommit mode
