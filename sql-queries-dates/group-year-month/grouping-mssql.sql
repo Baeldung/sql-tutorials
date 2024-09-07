@@ -21,3 +21,9 @@ FROM Registration
 GROUP BY FORMAT(reg_datetime, 'yyyy-MM')
 ORDER BY year_month;
 
+SELECT 
+DATETRUNC(Month, reg_datetime) AS month_start,
+COUNT(*) AS total_registrations
+FROM Registration
+GROUP BY DATETRUNC(Month, reg_datetime)
+ORDER BY month_start;
