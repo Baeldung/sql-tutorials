@@ -1,0 +1,13 @@
+CREATE VIEW cs_students AS
+SELECT s.name, s.enrollment_date
+FROM Student s
+WHERE s.id IN (
+    SELECT r.student_id
+    FROM Registration r
+    JOIN Course c ON r.course_id = c.id
+    WHERE c.department_id = (
+        SELECT id FROM Department WHERE name = 'Computer Science'
+    )
+);
+
+SELECT * FROM cs_students;
