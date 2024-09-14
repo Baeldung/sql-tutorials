@@ -1,0 +1,4 @@
+SET SESSION sql_require_primary_key = 'ON'
+
+ALTER TABLE REGISTRATION 
+DROP PRIMARY KEY;
