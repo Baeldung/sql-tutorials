@@ -1,6 +1,6 @@
-SELECT name, 
-       gpa, 
-       (SELECT AVG(gpa) FROM Student) AS avg_gpa,
-       gpa - (SELECT AVG(gpa) FROM Student) AS gpa_difference
-FROM Student
-WHERE gpa IS NOT NULL;
+SELECT s.name,
+       (SELECT e.exam_date
+        FROM Exam e
+        WHERE e.student_id = s.id 
+        AND e.exam_date >= ALL (SELECT exam_date FROM Exam WHERE student_id = s.id)) AS last_exam_date
+FROM Student s;

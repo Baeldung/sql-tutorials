@@ -1,12 +1,8 @@
-SELECT id, name, credits, department_id
-FROM Course
-WHERE credits > (
-    SELECT AVG(credits)
-    FROM Course AS c2
-    WHERE c2.department_id = Course.department_id
-)
-AND department_id IN (
-    SELECT id
-    FROM Department
-    WHERE name IN ('Computer Science', 'Mathematics')
+SELECT s.name
+FROM Student s
+WHERE EXISTS (
+    SELECT 1
+    FROM Exam e
+    WHERE e.student_id = s.id 
+    AND e.exam_date >= ALL (SELECT exam_date FROM Exam WHERE student_id = s.id)
 );
