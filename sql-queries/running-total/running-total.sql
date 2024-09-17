@@ -4,7 +4,7 @@ FROM Exam;
 
 SELECT id, scores, (SELECT SUM(scores)
                     FROM exam e2 WHERE e2.id <= e1.id) AS RunningTotal
-FROM exam e1 ORDER BY id;
+FROM Exam e1 ORDER BY id;
 
 SELECT s1.id, s1.scores, SUM(s2.scores) AS RunningTotal
 FROM Exam s1
