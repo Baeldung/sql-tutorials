@@ -1,1 +1,14 @@
+## Relevant Article:
+-  [Removing the Primary Key in a MySQL Table](https://www.baeldung.com/sql/mysql-delete-primary-key)
+-  [Difference Between CTE and Subquery](https://www.baeldung.com/sql/cte-vs-subquery)
+-  [Understanding the SQL OVER() Clause](https://www.baeldung.com/sql/over)
+-  [Deleting a Column From a Table in SQL](https://www.baeldung.com/sql/delete-column-from-table)
+-  [Understanding the Purpose of Creating a View in a Database](https://www.baeldung.com/sql/database-view-purpose)
+-  [How to Remove Leading Zeros in SQL](https://www.baeldung.com/sql/remove-leading-zeros)
+-  [Selecting Dates Within a Range Using SQL Queries](https://www.baeldung.com/sql/select-dates-range)
+-  [Difference Between SET autocommit=1 and START TRANSACTION in MySQL](https://www.baeldung.com/sql/mysql-autocommit-one-vs-start-transaction)
+-  [Selecting the Bottom N Rows in SQL Queries](https://www.baeldung.com/sql/select-bottom-n-rows)
+-  [Turning Off Autocommit For a MySQL Client](https://www.baeldung.com/sql/mysql-turn-off-autocommit-mode)
+-  [Removing the Primary Key in a MySQL Table](https://www.baeldung.com/sql/mysql-delete-primary-key)
 
+[skip ci]
