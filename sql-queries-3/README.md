@@ -17,3 +17,4 @@
 - [How to Count the Number of Distinct Values in a SQL Column](https://www.baeldung.com/sql/count-distinct-values)
 - [How to Combine Data From Multiple Tables Using an SQL Joins](https://www.baeldung.com/sql/join-data-multiple-tables)
 - [How to Restrict Results to Top N Rows per Group in SQL](https://www.baeldung.com/sql/top-n-rows-window-functions)
+- [Physical vs. Logical Deletion of Database Records](https://www.baeldung.com/sql/physical-vs-logical-deletion)
