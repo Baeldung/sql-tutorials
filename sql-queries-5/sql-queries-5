@@ -9,6 +9,4 @@
 -  [Difference Between SET autocommit=1 and START TRANSACTION in MySQL](https://www.baeldung.com/sql/mysql-autocommit-one-vs-start-transaction)
 -  [Selecting the Bottom N Rows in SQL Queries](https://www.baeldung.com/sql/select-bottom-n-rows)
 -  [Turning Off Autocommit For a MySQL Client](https://www.baeldung.com/sql/mysql-turn-off-autocommit-mode)
--  [Removing the Primary Key in a MySQL Table](https://www.baeldung.com/sql/mysql-delete-primary-key)
-
 [skip ci]
