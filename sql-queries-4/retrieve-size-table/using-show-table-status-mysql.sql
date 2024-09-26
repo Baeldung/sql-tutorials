@@ -1,0 +1,1 @@
+SHOW TABLE STATUS FROM University;
