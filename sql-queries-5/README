@@ -1,1 +1,3 @@
-
+- [Best Practices for String Concatenation and Aggregation in SQL](https://www.baeldung.com/sql/string-concatenation-aggregation)
+- [Updating Data with Joins in SQL Queries](https://www.baeldung.com/sql/updating-data-joins)
+- [Performing an Insert if Not Exists Operation in SQL](https://www.baeldung.com/sql/insert-if-not-exists-operation)
