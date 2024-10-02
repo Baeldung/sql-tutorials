@@ -1,12 +1,6 @@
-CREATE TABLE employees (
-    id INT PRIMARY KEY,
-    name VARCHAR(50),
-    department VARCHAR(50)
-);
+INSERT INTO Department (id, name, code) VALUES (1, 'Computer Science', 'CS');
 
-INSERT INTO employees (id, name, department) VALUES (1, 'Alice', 'Finance');
+INSERT INTO Department (id, name, code) VALUES (1, 'Computer Science', 'CSE')
+ON CONFLICT (id) DO UPDATE SET name = 'Computer Science', code = 'CSE';
 
-INSERT INTO employees (id, name, department) VALUES (1, 'Alice', 'Accounting')
-ON CONFLICT (id) DO UPDATE SET name = 'Alice', department = 'Accounting';
-
-SELECT * from employees;
+SELECT * from Department;

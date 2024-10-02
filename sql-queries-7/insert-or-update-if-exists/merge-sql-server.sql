@@ -1,19 +1,11 @@
-CREATE TABLE employees (
-    id INT PRIMARY KEY,
-    name VARCHAR(50),
-    department VARCHAR(50)
-);
+INSERT INTO Department (id, name, code) VALUES (1, 'Computer Science', 'CS');
 
-
-INSERT INTO employees (id, name, department) VALUES (1, 'Alice', 'Finance');
-
-MERGE INTO employees AS target
-USING (SELECT 1 AS id, 'Alice' AS name, 'Accounting' AS department) AS source
+MERGE INTO Department AS target
+USING (SELECT 1 AS id, 'Computer Science' AS name, 'CSE' AS code) AS source
 ON target.id = source.id
 WHEN MATCHED THEN
-    UPDATE SET name = source.name, department = source.department
+    UPDATE SET name = source.name, code = source.code
 WHEN NOT MATCHED THEN
-    INSERT (id, name, department) VALUES (source.id, source.name, source.department);
+    INSERT (id, name, code) VALUES (source.id, source.name, source.code);
 
-
-SELECT * from employees;
+SELECT * from Department;
