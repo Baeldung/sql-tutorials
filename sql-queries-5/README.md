@@ -13,3 +13,4 @@
 - [Difference Between SET autocommit=1 and START TRANSACTION in MySQL](https://www.baeldung.com/sql/mysql-autocommit-one-vs-start-transaction)
 - [Selecting the Bottom N Rows in SQL Queries](https://www.baeldung.com/sql/select-bottom-n-rows)
 - [Turning Off Autocommit For a MySQL Client](https://www.baeldung.com/sql/mysql-turn-off-autocommit-mode)
+- [How to Split Single Column Values to Multiple Columns in SQL](https://www.baeldung.com/sql/split-single-column-values)
