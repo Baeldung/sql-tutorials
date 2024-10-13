@@ -1,4 +1,6 @@
-import pandas as pd from pandasql import sqldf 
+import pandas as pd
+from pandasql import sqldf 
+
 # Load the CSV file into a DataFrame 
 df = pd.read_csv('data.csv') 
 
