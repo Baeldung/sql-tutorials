@@ -1,4 +1,4 @@
-cat example2_csv.py import duckdb 
+import duckdb 
 
 # Run a query directly on the CSV file 
 query = "SELECT AVG(weight) AS avg_weight FROM read_csv_auto('data.csv')" 
