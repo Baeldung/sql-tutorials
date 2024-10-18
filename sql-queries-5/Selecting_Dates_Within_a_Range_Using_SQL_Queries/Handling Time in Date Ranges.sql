@@ -1,0 +1,1 @@
+SELECT * FROM Student WHERE enrollment_date >= '2020-01-15 00:00:00' AND enrollment_date < '2022-12-08 00:00:00'
