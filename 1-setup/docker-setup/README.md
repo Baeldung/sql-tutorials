@@ -59,3 +59,8 @@ This starts PostgreSQL, MySQL, SQL Server and Adminer GUI in a single command.
 
 ### Using separate GUI
 Another way is to start all the databases manually using their on `docker-compose.yml` files. If you have a preferred GUI such as [DB Visualizer](https://www.dbvis.com/), [PG Admin](https://www.pgadmin.org/) or any other, you can use it to connect to the docker databases. In such cases, they can be accessed using `localhost` url with the correct port from respective docker-compose files.
+
+### Diagnostic
+Sometimes, when all the docker images are run together, there is a chance of some of them not starting. You may retry the same command 2-3 times to make it work. This is espcially the case with SQL Server. 
+
+If there is an issue, it is better to delete the installed docker images and rerun. For example, Microsoft recently changed the path for the tools in the docker and it caused issue. The path is updated now, but sometimes this might cause invalid combination of docker-compose file and the installed image. 

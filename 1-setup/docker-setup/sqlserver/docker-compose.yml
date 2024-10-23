@@ -16,9 +16,9 @@ services:
       /bin/bash -c "
       /opt/mssql/bin/sqlservr & 
       sleep 30 && 
-      /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P $${SA_PASSWORD} -i /university-sqlserver.sql &&
+      /opt/mssql-tools18/bin/sqlcmd -C -S localhost -U SA -P $${SA_PASSWORD} -i /university-sqlserver.sql &&
       sleep 10 && 
-      /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P $${SA_PASSWORD} -d University -i /insert-scripts.sql &&
+      /opt/mssql-tools18/bin/sqlcmd -C -S localhost -U SA -P $${SA_PASSWORD} -d University -i /insert-scripts.sql &&
       while true; do sleep 3600; done
       "
     
