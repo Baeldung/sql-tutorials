@@ -1,5 +1,5 @@
 -- using subqueries for multiple counts
-SELECT COUNT(*) AS TotalCount, 
-        (SELECT COUNT(*) FROM exam WHERE semester = 'FALL') AS FallCount, 
-        (SELECT COUNT(*) FROM exam WHERE semester = 'SPRING') AS SpringCount 
+SELECT COUNT(*) AS total_count, 
+        (SELECT COUNT(*) FROM Exam WHERE semester = 'FALL') AS fall_count, 
+        (SELECT COUNT(*) FROM Exam WHERE semester = 'SPRING') AS spring_count 
 FROM Exam;
