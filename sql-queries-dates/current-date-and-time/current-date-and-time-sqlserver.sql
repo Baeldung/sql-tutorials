@@ -1,7 +1,7 @@
 --GETDATE function 
-SELECT GETUTCDATE(); 
+SELECT GETDATE(); 
 
---CURRENT_TIMESTAMP function 
+--CURRENT_TIMESTAMP system defined constant function 
 SELECT CURRENT_TIMESTAMP;
 
 --SYSDATETIME function
