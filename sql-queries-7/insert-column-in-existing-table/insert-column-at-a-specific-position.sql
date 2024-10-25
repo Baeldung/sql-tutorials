@@ -1,7 +1,7 @@
 -- Create new table with columns in desired order
 CREATE TABLE Baeldung2 (first_column int, new_second_column date, second_column varchar(150), third_column varchar(100));
 
--- Transfer data from old table to new table
+-- Insert data into new table from old table
 INSERT INTO Baeldung2 (first_column, second_column, third_column) SELECT first_column, second_column, third_column FROM Baeldung;
 
 -- Drop old table
