@@ -7,10 +7,10 @@ INSERT INTO Baeldung2 (first_column, second_column, third_column) SELECT first_c
 -- Drop old table
 DROP TABLE Baeldung;
 
--- Rename new table on MySQL and PostgreSQL
+-- Rename new table to old table [MySQL and PostgreSQL]
 ALTER TABLE Baeldung2 RENAME TO Baeldung;
 
--- Rename new table on MSSQL
+-- Rename new table to old table [MSSQL]
 EXEC sp_rename 'Baeldung2', 'Baeldung';
 
 -- Query information_schema.columns for columns in recreated table Baeldung
