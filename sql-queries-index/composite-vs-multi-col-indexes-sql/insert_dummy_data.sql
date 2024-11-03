@@ -1,11 +1,11 @@
 DELIMITER $$
 
--- Create a procedure to insert 100,000 records
-CREATE PROCEDURE ainsert_students()
+-- Create a procedure to insert 10,000 records
+CREATE PROCEDURE insert_students()
 BEGIN
     DECLARE i INT DEFAULT 3000;
 
-    WHILE i <= 100000 DO
+    WHILE i <= 13000 DO
         INSERT INTO Student (id, name, national_id, birth_date, enrollment_date, graduation_date, gpa)
         VALUES (
             i,
