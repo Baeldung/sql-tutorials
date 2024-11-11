@@ -1,0 +1,3 @@
+UPDATE DEPARTMENT 
+SET code='MA' 
+WHERE id=5;
