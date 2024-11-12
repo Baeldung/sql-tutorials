@@ -1,0 +1,17 @@
+SET AUTOCOMMIT='OFF';
+
+DELETE 
+FROM Department 
+WHERE id=6 OR id=7;
+
+SAVEPOINT sp1;
+
+UPDATE Department 
+SET name = 'Mathematics' 
+WHERE id=5;
+
+ROLLBACK TO SAVEPOINT sp1;
+
+RELEASE SAVEPOINT sp1;
+
+COMMIT;
