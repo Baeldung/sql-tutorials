@@ -3,7 +3,7 @@ WITH RankedStudents AS (
     SELECT 
         id, name, national_id, birth_date, enrollment_date, graduation_date, gpa,
         RANK() OVER (ORDER BY gpa DESC) AS rank
-    FROM student
+    FROM Student
 )
 SELECT id, name, national_id, gpa
 FROM RankedStudents
