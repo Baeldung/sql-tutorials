@@ -5,7 +5,7 @@ FROM Department
 ORDER BY code DESC;
 
 -- Sort a list of strings in a specific predefined order using a CASE statement
-SELECT name, code
+SELECT *
 FROM Department
 ORDER BY 
     CASE name
