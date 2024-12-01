@@ -1,4 +1,4 @@
-University=# DELETE FROM student 
+DELETE FROM student 
 WHERE id IN ( 
     SELECT s.id 
     FROM student s 
