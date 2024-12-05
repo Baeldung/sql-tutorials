@@ -7,7 +7,7 @@ WITH RankedStudents AS (
 )
 SELECT id, name, national_id, gpa
 FROM RankedStudents
-WHERE rank = 1;
+WHERE rank <= 3;
 
 --using a subquery
 SELECT *
