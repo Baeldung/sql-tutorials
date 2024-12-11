@@ -1,0 +1,4 @@
+CREATE TABLE Products ( 
+  ProductID INT PRIMARY KEY NONCLUSTERED, 
+  ProductName NVARCHAR(50), 
+  Price DECIMAL(10, 2));
