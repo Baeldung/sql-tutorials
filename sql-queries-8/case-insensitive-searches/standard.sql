@@ -1,3 +1,3 @@
 SELECT id, name 
-FROM Student 
+FROM Course 
 WHERE LOWER(name) LIKE '%phil%';

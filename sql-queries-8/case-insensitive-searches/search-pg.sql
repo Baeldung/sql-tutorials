@@ -1,7 +1,7 @@
 SELECT id, name 
-FROM Student 
-WHERE name ILIKE '%phil%';
+FROM Course 
+WHERE name ILIKE '%operating system%';
 
 SELECT id, name 
 FROM Student 
-WHERE name ~* 'PHIL';
+WHERE name ~* 'OPERATING';
