@@ -1,4 +1,5 @@
-CREATE TABLE Employees ( 
-  EmployeeID INT PRIMARY KEY, 
-  Name NVARCHAR(50), 
-  Department NVARCHAR(50));
+CREATE TABLE Classroom ( 
+  id INT PRIMARY KEY, 
+  room_number VARCHAR(50), 
+  building_name VARCHAR(100), 
+  capacity INT);
