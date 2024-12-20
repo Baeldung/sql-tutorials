@@ -1,7 +1,7 @@
 SELECT id, name 
 FROM Course 
-WHERE name ILIKE '%operating system%';
+WHERE name ILIKE '%operating%';
 
 SELECT id, name 
-FROM Student 
+FROM Course 
 WHERE name ~* 'OPERATING';
