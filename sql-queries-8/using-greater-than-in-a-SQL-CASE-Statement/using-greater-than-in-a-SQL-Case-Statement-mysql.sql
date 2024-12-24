@@ -11,18 +11,16 @@ SELECT
     END AS gpa_category
 FROM Student;
 
--- Determining Graduation Status Based on Dates
+-- Determining Graduation Status
 
-SELECT 
-    id, 
-    name, 
+SELECT
+    id,
+    name,
     graduation_date,
-    gpa,
-    CASE 
-        WHEN graduation_date IS NULL THEN 'Still Enrolled'
-        WHEN graduation_date > CAST(GETDATE() AS DATE) THEN 'Upcoming Graduate'
-        ELSE 'Graduated'
-    END AS graduation_status
+    CASE
+        WHEN CURRENT_DATE > graduation_date AND graduation_date IS NOT NULL THEN TRUE
+        ELSE FALSE
+    END AS graduated
 FROM Student;
 
 -- Categorizing Students Into Age Groups Based on Their Age
@@ -32,8 +30,8 @@ SELECT
     name, 
     birth_date,
     CASE 
-        WHEN DATEDIFF(YEAR, birth_date, GETDATE()) > 23 THEN '24 and above'
-        WHEN DATEDIFF(YEAR, birth_date, GETDATE()) > 20 THEN '21-23'
+        WHEN YEAR(CURRENT_DATE) - YEAR(birth_date) > 23 THEN '24 and above'
+        WHEN YEAR(CURRENT_DATE) - YEAR(birth_date) > 20 THEN '21-23'
         ELSE '18-20'
     END AS age_group
 FROM Student;
