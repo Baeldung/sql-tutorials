@@ -18,7 +18,7 @@ SELECT
     name,
     graduation_date,
     CASE
-        WHEN CURRENT_DATE > graduation_date AND graduation_date IS NOT NULL THEN TRUE
+        WHEN graduation_date IS NOT NULL AND CURRENT_DATE > graduation_date THEN TRUE
         ELSE FALSE
     END AS graduated
 FROM Student;
