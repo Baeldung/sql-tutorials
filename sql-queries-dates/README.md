@@ -5,3 +5,4 @@
 - [Get Current Timestamp in SQL Server](https://www.baeldung.com/sql/sql-server-current-timestamp)
 - [Group Query Results by Month and Year in SQL](https://www.baeldung.com/sql/group-by-date-parts)
 - [How to Get the Day of the Week in SQL](https://www.baeldung.com/sql/day-of-the-week)
+- [Selecting Dates Within a Range Using SQL Queries](https://www.baeldung.com/sql/select-dates-range)
