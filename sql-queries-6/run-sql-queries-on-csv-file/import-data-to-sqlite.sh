@@ -1,0 +1,1 @@
+sqlite3 :memory: -cmd '.mode csv' -cmd '.import data.csv my_table'

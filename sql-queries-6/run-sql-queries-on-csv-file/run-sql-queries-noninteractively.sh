@@ -1,0 +1,1 @@
+sqlite3 :memory: -cmd '.mode csv' -cmd '.import data.csv my_table' 'SELECT sex, COUNT(*) FROM my_table GROUP BY sex;'

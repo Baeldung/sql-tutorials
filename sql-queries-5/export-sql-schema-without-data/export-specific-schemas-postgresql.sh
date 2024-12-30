@@ -1,0 +1,1 @@
+pg_dump -U user -h 127.0.0.1 -s -n public -f baeldung_public_schema.sql University
