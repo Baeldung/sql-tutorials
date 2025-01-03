@@ -1,20 +1,15 @@
 --using a Common Table Expression
 WITH RankedStudents AS (
-    SELECT 
-        id, name, national_id, birth_date, enrollment_date, graduation_date, gpa,
-        RANK() OVER (ORDER BY gpa DESC) AS rank
-    FROM Student
-)
-SELECT id, name, national_id, gpa
-FROM RankedStudents
-WHERE rank <= 3;
+    SELECT id, name, national_id, birth_date, enrollment_date, graduation_date, gpa, 
+    RANK() OVER (ORDER BY national_id ASC) AS r FROM Student ) 
+SELECT id, name, national_id, r 
+FROM RankedStudents 
+WHERE r <= 3;
 
 --using a subquery
-SELECT *
-FROM (
-    SELECT 
-        id, name, GPA, 
-        RANK() OVER (ORDER BY GPA DESC) AS Rank
-    FROM Student
+SELECT id, name, national_id, r 
+    FROM ( SELECT id, name, national_id, birth_date, enrollment_date, graduation_date, gpa, 
+    RANK() OVER (ORDER BY national_id ASC) AS r
+    FROM Student 
 ) AS RankedStudents
-WHERE Rank <= 3;
+WHERE r <= 3;
