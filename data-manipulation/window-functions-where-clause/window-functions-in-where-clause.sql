@@ -14,9 +14,9 @@ WHERE r <= 3;
 SELECT *
 FROM (
     SELECT 
-        id, name, GPA, 
-        RANK() OVER (ORDER BY GPA DESC) AS r
+        id, name, gpa, 
+        RANK() OVER (ORDER BY gpa DESC) AS r
     FROM Student
-    WHERE GPA IS NOT NULL
+    WHERE gpa IS NOT NULL
 ) AS RankedStudents
 WHERE r <= 3;
