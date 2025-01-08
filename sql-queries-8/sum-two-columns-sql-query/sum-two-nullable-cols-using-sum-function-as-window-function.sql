@@ -1,4 +1,4 @@
-SELECT  publisher_id,
+SELECT  publisher_id,magazine_name,
 COALESCE(q1sales,0)+COALESCE(q2sales,0) AS magazine_sales,
 SUM(COALESCE(q1sales,0)+COALESCE(q2sales,0))
     OVER(PARTITION BY publisher_id) AS publisher_sales,
