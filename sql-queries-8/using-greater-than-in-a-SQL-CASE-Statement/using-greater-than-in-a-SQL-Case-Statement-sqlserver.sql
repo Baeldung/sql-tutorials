@@ -18,7 +18,7 @@ SELECT
     name, 
     graduation_date,
     CASE 
-        WHEN CAST(GETDATE() AS DATE) > graduation_date AND graduation_date IS NOT NULL THEN 1
+        WHEN graduation_date IS NOT NULL AND CAST(GETDATE() AS DATE) > graduation_date THEN 1
         ELSE 0
     END AS graduated
 FROM Student;
