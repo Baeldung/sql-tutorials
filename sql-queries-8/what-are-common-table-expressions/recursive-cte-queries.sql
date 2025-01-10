@@ -32,6 +32,3 @@ FROM
 ORDER BY 
     student_id, active_year
 LIMIT 20;
-
-
-This gives us a year-by-year breakdown of a student’s active enrollment. The table below shows all th
