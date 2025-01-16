@@ -1,0 +1,1 @@
+SELECT name, IFNULL(gpa, 0) FROM Student WHERE graduation_date = '2025-06-15';
