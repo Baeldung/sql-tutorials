@@ -1,1 +1,1 @@
-SELECT name, ISNULL(lab_hours, 0) FROM Student;
+SELECT AVG(ISNULL(lab_hours, 0)) FROM Student;
