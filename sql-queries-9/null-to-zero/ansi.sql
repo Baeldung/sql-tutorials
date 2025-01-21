@@ -1,5 +1,5 @@
-SELECT name, COALESCE(gpa, 0) FROM Student WHERE graduation_date = '2025-06-15';
+SELECT name, COALESCE(lab_hours, 0) FROM Student;
 
 SELECT name,
-       CASE WHEN gpa IS NULL THEN 0 ELSE gpa END 
-FROM Student WHERE graduation_date = '2025-06-15';
+       CASE WHEN lab_hours IS NULL THEN 0 ELSE lab_hours END 
+FROM Student;

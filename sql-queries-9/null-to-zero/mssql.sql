@@ -1,1 +1,1 @@
-SELECT name, ISNULL(gpa, 0) FROM Student WHERE graduation_date = '2025-06-15';
+SELECT name, ISNULL(lab_hours, 0) FROM Student;
