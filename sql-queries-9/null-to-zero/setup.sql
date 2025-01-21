@@ -8,5 +8,8 @@ UPDATE Student SET lab_hours = 12 WHERE id = 1710;
 UPDATE Student SET lab_hours = 5 WHERE id = 1621;
 UPDATE Student SET lab_hours = 5 WHERE id = 1721;
 
--- Remove the column to revert to initial state
+-- Remove the column to revert to initial state (in Postgresql and MySQL)
 ALTER TABLE Student DROP lab_hours;
+
+-- In SQL Server
+ALTER TABLE Student DROP COLUMN lab_hours;
