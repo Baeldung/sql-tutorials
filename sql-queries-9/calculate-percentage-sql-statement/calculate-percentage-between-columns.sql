@@ -2,13 +2,13 @@ SELECT
     obtained,
     total,
     (obtained / total) * 100 AS percentage
-FROM result;
+FROM Result;
 
 SELECT
     SUM(obtained) AS total_obtained,
     SUM(total) AS total_marks,
     (SUM(obtained) / SUM(total) * 100) AS overall_percentage
-FROM result;
+FROM Result;
 
 SELECT
     SUM(obtained) AS total_obtained,
