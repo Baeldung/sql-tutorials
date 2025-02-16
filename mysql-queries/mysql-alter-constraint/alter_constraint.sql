@@ -1,10 +1,3 @@
--- SQL script to create DB, and tables. Then insert data in each table
-DROP DATABASE IF EXISTS University;
-CREATE DATABASE University DEFAULT CHARACTER SET=utf8; 
-
--- Change schema to University
-USE University;
-
 -- Create Tables
 
 CREATE TABLE Department
@@ -204,9 +197,26 @@ ADD CONSTRAINT registration_course_id_fkey
 FOREIGN KEY (course_id) REFERENCES Course(id)
 ON DELETE CASCADE;
 
-ALTER TABLE Student
-ADD CONSTRAINT CHK_GPA CHECK (gpa BETWEEN 2.0 AND 5.0);
+--Insert the rows deleted back to the schema
 
-INSERT INTO Student (id, name, national_id, birth_date, enrollment_date, graduation_date, gpa) VALUES
-  (2001, 'Vinita Singh Puri', 1912061343, '2005-5-13', '2025-01-15', '2030-06-15', 1.64);
+ INSERT INTO Course (id, name, textbook, credits, is_active, department_id) VALUES
+ ('EC411', 'Principles of Communication-III', 'Principles Of Communications: System Modulation And Noise', 5, 'Yes', '2');
+
+ INSERT INTO Registration (id, semester, year, reg_datetime, student_id, course_id) VALUES
+  (2101, 'SPRING', 2023, '2023-01-06 11:42:50', 1607, 'EC411'),
+   (2111, 'SPRING', 2023, '2023-01-06 11:42:50', 1610, 'EC411');
+
+ ALTER TABLE Student
+ ADD CONSTRAINT CHK_GPA CHECK (gpa BETWEEN 3.0 AND 5.0);
+
+ UPDATE Student
+ SET gpa = CASE
+     WHEN gpa < 3.0 THEN 3.0
+     WHEN gpa > 5.0 THEN 5.0
+     ELSE gpa
+ END
+ WHERE gpa < 3.0 OR gpa > 5.0;
+
+ INSERT INTO Student (id, name, national_id, birth_date, enrollment_date, graduation_date, gpa) VALUES
+   (2001, 'Vinita Singh Puri', 1912061343, '2005-5-13', '2025-01-15', '2030-06-15', 2.64);
   
