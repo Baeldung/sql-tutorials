@@ -10,7 +10,7 @@ CREATE TABLE Student_Mod (
     enrollment_date DATE,
     graduation_date DATE,
     gpa DECIMAL(3, 2),
-    FOREIGN KEY (id) REFERENCES person(id)
+    FOREIGN KEY (id) REFERENCES Record_Mod(id)
 );
 
 CREATE TABLE Faculty_Mod (
@@ -18,7 +18,7 @@ CREATE TABLE Faculty_Mod (
     position VARCHAR(50),
     start_date DATE,
     end_date DATE,
-    FOREIGN KEY (id) REFERENCES person(id)
+    FOREIGN KEY (id) REFERENCES Record_Mod(id)
 );
 
 INSERT INTO Record_Mod (id, name, national_id, birth_date)
