@@ -1,0 +1,1 @@
+="INSERT INTO students (id, name, national_id, birth_date, enrollment_date, graduation_date, gpa) VALUES (" & A2 & ", '" & B2 & "', '" & C2 & "', '" & D2 & "', '" & E2 & "', '" & F2 & "', " & G2 & ");"
