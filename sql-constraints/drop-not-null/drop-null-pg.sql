@@ -1,0 +1,3 @@
+ALTER TABLE student 
+ALTER COLUMN national_id 
+DROP NOT NULL;
