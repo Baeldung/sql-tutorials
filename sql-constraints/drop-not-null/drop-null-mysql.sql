@@ -1,0 +1,2 @@
+ALTER TABLE Student
+MODIFY COLUMN national_id BIGINT NULL;
