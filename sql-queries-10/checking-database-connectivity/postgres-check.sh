@@ -2,18 +2,6 @@
 
 # PostgreSQL Database Connectivity Check Script
 
-# Create .env file if it doesn't exist
-if [ ! -f .env ]; then
-    cat > .env <<EOF
-DB_HOST="localhost"
-DB_PORT="5432"
-DB_USER="user"
-DB_PASS="Password!2024"
-DB_NAME="University"
-EOF
-    echo "Created .env file with PostgreSQL configuration"
-fi
-
 # Load environment variables
 source .env
 
