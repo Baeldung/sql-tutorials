@@ -3,7 +3,7 @@
 # PostgreSQL Database Connectivity Check Script
 
 # Load environment variables
-source .env
+source postgresql.env
 
 echo "Testing PostgreSQL connectivity..."
 
