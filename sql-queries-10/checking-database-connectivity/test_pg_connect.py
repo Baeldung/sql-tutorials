@@ -35,4 +35,3 @@ except Exception as e:
 finally:
     if 'connection' in locals():
         connection.close()
-EOF

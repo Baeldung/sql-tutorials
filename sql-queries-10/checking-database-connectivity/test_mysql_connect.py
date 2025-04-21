@@ -35,4 +35,3 @@ except mysql.connector.Error as err:
 finally:
     if 'connection' in locals() and connection.is_connected():
         connection.close()
-EOF
