@@ -1,24 +1,24 @@
-DECLARE @TableName NVARCHAR(255), @IndexName NVARCHAR(255), @SQL NVARCHAR(MAX); 
-DECLARE frag_cursor CURSOR FOR 
+USE University;
+GO
 
-SELECT QUOTENAME(SCHEMA_NAME(t.schema_id)) + '.' + QUOTENAME(t.name), 
-       QUOTENAME(i.name) 
-FROM 
-  sys.dm_db_index_physical_stats(DB_ID(), NULL, NULL, NULL, 'LIMITED') AS ps 
-INNER JOIN sys.indexes i ON ps.object_id = i.object_id AND ps.index_id = i.index_id 
-INNER JOIN sys.tables t ON i.object_id = t.object_id 
-WHERE ps.avg_fragmentation_in_percent > 30 AND i.type_desc IN ('CLUSTERED', 'NONCLUSTERED'); 
+DECLARE @TableName NVARCHAR(255);
+DECLARE @SQL NVARCHAR(MAX);
 
-OPEN frag_cursor; 
-FETCH NEXT FROM frag_cursor INTO @TableName, @IndexName; 
+DECLARE table_cursor CURSOR FOR
+SELECT QUOTENAME(SCHEMA_NAME(t.schema_id)) + '.' + QUOTENAME(t.name)
+FROM sys.tables t
+WHERE t.is_ms_shipped = 0;
 
-WHILE @@FETCH_STATUS = 0 
-BEGIN 
-  SET @SQL = 'ALTER INDEX ' + @IndexName + ' ON ' + @TableName + ' REBUILD;'; 
-  PRINT 'Rebuilding index: ' + @IndexName + ' on ' + @TableName; 
-  EXEC sp_executesql @SQL; 
-  FETCH NEXT FROM frag_cursor INTO @TableName, @IndexName; 
-END; 
+OPEN table_cursor;
+FETCH NEXT FROM table_cursor INTO @TableName;
 
-CLOSE frag_cursor; 
-DEALLOCATE frag_cursor;
+WHILE @@FETCH_STATUS = 0
+BEGIN
+    SET @SQL = 'ALTER INDEX ALL ON ' + @TableName + ' REBUILD WITH (FILLFACTOR = 90, SORT_IN_TEMPDB = ON);';
+    PRINT 'Rebuilding indexes on: ' + @TableName;
+    EXEC sp_executesql @SQL;
+    FETCH NEXT FROM table_cursor INTO @TableName;
+END;
+
+CLOSE table_cursor;
+DEALLOCATE table_cursor;
