@@ -1,4 +1,5 @@
-ALTER INDEX ALL ON dbo.Teaching 
+ALTER INDEX [PK__Teaching__3213E83FFA8FEA28] 
+ON dbo.Teaching 
 REBUILD WITH ( 
     FILLFACTOR = 90, 
     SORT_IN_TEMPDB = ON, 
