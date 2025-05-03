@@ -1,10 +1,4 @@
 -- STORING BINARY FILES
--- View Databases
-SHOW Databases;
-
--- View Tables
-SHOW Tables;
-
 -- Modify textbook Column in Course Table to accept Binary Files
 ALTER TABLE Course MODIFY textbook LONGBLOB;
 
