@@ -1,0 +1,1 @@
+USE University; SELECT d.name AS department_name, STRING_AGG(s.name, ', ') AS student_names FROM Student s JOIN Course c ON s.id = c.department_id JOIN Department d ON c.department_id = d.id GROUP BY d.name;
