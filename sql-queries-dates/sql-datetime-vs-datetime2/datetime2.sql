@@ -1,0 +1,10 @@
+CREATE TABLE Events (
+EventTime DATETIME2
+);
+
+INSERT INTO Events (EventTime)
+VALUES ('2024-08-05 10:30:00.12345');
+
+SELECT EventTime
+FROM Events
+WHERE EventTime = '2024-08-05 10:30:00.12345';
