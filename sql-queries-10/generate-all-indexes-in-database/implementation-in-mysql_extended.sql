@@ -1,7 +1,9 @@
 SELECT 
     TABLE_NAME, 
     INDEX_NAME, 
-    COLUMN_NAME
+    COLUMN_NAME,
+    NON_UNIQUE,
+    INDEX_TYPE
 FROM 
     information_schema.STATISTICS
 WHERE 

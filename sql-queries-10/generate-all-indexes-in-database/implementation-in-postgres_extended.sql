@@ -1,19 +1,4 @@
 SELECT 
-    schemaname, 
-    tablename, 
-    indexname, 
-    indexdef
-FROM 
-    pg_indexes
-WHERE 
-    schemaname = 'public'
-ORDER BY 
-    tablename, 
-    indexname;
-
-
-
-SELECT 
     t.relname AS table_name,
     i.relname AS index_name,
     a.attname AS column_name
