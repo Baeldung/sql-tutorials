@@ -1,4 +1,4 @@
-INSERT INTO department_copy (id,name,code) 
-SELECT 11,name,code 
+INSERT INTO department_copy (id, name, code) 
+SELECT 11, name, code 
 FROM department_copy 
 WHERE id = 1;
