@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS public
+CREATE TABLE IF NOT EXISTS countries
 (
     country_id integer NOT NULL,
     country_name text ,
