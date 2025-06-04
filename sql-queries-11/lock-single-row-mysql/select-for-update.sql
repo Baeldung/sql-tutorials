@@ -6,17 +6,6 @@ WHERE id=5
 FOR UPDATE;
 
 //Second Session
-START TRANSACTION;
-SELECT * 
-FROM DEPARTMENT 
-WHERE id=5;
-
-//First Session
-UPDATE DEPARTMENT 
-SET code='MATH' 
-WHERE id=5;
-
-//Second Session
 SELECT * 
 FROM DEPARTMENT 
 WHERE id=5 
@@ -24,12 +13,6 @@ FOR SHARE;
 
 //First Session
 COMMIT;
-
-//Second Session
-SELECT * 
-FROM DEPARTMENT 
-WHERE id=5 
-FOR SHARE;
 
 //Second Session
 START TRANSACTION;
