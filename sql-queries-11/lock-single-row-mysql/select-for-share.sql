@@ -1,27 +1,27 @@
-//First Session
+// First Session
 START TRANSACTION;
 SELECT * 
 FROM DEPARTMENT 
 WHERE id=5 
 FOR SHARE;
 
-//Second Session
+// Second Session
 START TRANSACTION;
 SELECT * 
 FROM DEPARTMENT 
 WHERE id=5 
 FOR SHARE;
 
-//Second Session
+// Second Session
 SELECT * 
 FROM DEPARTMENT 
 WHERE id=5 
 FOR UPDATE;
 
-//First Session
+// First Session
 COMMIT;
 
-//Second Session
+// Second Session
 START TRANSACTION;
 UPDATE DEPARTMENT 
 SET code='MA' 
