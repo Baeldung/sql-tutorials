@@ -1,0 +1,1 @@
+mysqlimport --local --fields-terminated-by=',' --lines-terminated-by='\n' --ignore-lines=1 --columns='id,name,age,department,hire_date' -u root -p --host=127.0.0.1 University /home/kali/import-csv/employee_data.csv

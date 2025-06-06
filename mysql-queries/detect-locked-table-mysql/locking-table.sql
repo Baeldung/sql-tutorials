@@ -1,0 +1,2 @@
+LOCK TABLES Student WRITE;
+

@@ -1,0 +1,13 @@
+-- This query returns all Students in the University
+SELECT * FROM Student;
+SELECT * FROM Student -- WHERE NAME = 'John';
+
+SELECT * FROM Student WHERE NAME /* wild card matching for name */ LIKE '%John%';
+
+SELECT * FROM Student WHERE NAME 
+/* wild card matching for name. 
+Change it based on the requirement 
+*/ 
+LIKE '%John%';
+
+SELECT /*! STRAIGHT_JOIN */ * FROM Student /*+ USE INDEX (PRIMARY) */ WHERE id = 1001;
