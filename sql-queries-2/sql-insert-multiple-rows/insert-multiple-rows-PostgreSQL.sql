@@ -1,0 +1,8 @@
+INSERT INTO Student (id, name, national_id) 
+VALUES (1001, 'John Liu', 123345566) 
+UNION ALL 
+VALUES (1003, 'Rita Ora', 132345166) 
+UNION ALL 
+VALUES (1007, 'Philip Lose', 321345566)
+UNION ALL 
+VALUES (1010, 'Samantha Prabhu', 3217165566)

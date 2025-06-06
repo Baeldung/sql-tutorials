@@ -1,0 +1,1 @@
+SHOW INDEX FROM Student WHERE Key_name = 'PRIMARY';
