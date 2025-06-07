@@ -1,0 +1,1 @@
+EXEC sp_fkeys @pktable_name = 'Registration';

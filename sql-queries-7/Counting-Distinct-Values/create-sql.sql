@@ -1,0 +1,10 @@
+SELECT DISTINCT name FROM Department;
+SELECT COUNT(DISTINCT name) AS unique_departments FROM Department;
+SELECT DISTINCT code FROM Course;
+SELECT DISTINCT YEAR(enrollment_date) AS enrollment_year FROM Student;
+SELECT COUNT(DISTINCT id) AS active_faculty FROM Faculty WHERE active = TRUE;
+SELECT COUNT(DISTINCT name) AS active_programs FROM Program WHERE CURDATE() BETWEEN start_date AND end_date;
+SELECT COUNT(DISTINCT id) AS recent_students FROM Student WHERE enrollment_date > '2020-01-01';
+SELECT COUNT(DISTINCT id) AS active_faculty FROM Faculty WHERE start_date <= '2022-12-31' AND (end_date IS NULL OR end_date >= '2020-01-01');
+SELECT COUNT(DISTINCT CASE WHEN is_active = 'TRUE' THEN id END) AS active_courses, COUNT(DISTINCT CASE WHEN is_active = 'FALSE' THEN id END) AS inactive_courses FROM Course;
+SELECT d.name AS department_name, COUNT(DISTINCT s.id) AS student_count FROM Student s JOIN Registration r ON s.id = r.student_id JOIN Course c ON r.course_id = c.id JOIN Department d ON c.department_id = d.id GROUP BY d.name;
