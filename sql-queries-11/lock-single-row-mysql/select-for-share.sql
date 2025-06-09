@@ -2,20 +2,20 @@
 START TRANSACTION;
 SELECT * 
 FROM DEPARTMENT 
-WHERE id=5 
+WHERE id = 5 
 FOR SHARE;
 
 // Second Session
 START TRANSACTION;
 SELECT * 
 FROM DEPARTMENT 
-WHERE id=5 
+WHERE id = 5 
 FOR SHARE;
 
 // Second Session
 SELECT * 
 FROM DEPARTMENT 
-WHERE id=5 
+WHERE id = 5 
 FOR UPDATE;
 
 // First Session
@@ -24,8 +24,8 @@ COMMIT;
 // Second Session
 START TRANSACTION;
 UPDATE DEPARTMENT 
-SET code='MA' 
-WHERE id<5 OR id>5;
+SET code = 'MA' 
+WHERE id < 5 OR id > 5;
 
 SELECT * 
 FROM DEPARTMENT;
