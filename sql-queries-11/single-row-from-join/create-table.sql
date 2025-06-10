@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS cities
     CONSTRAINT cities_pkey PRIMARY KEY (city_id),
     CONSTRAINT country_id FOREIGN KEY (country_id)
         REFERENCES countries (country_id)
-)
+);
 
 INSERT INTO countries (country_id, country_name)
     VALUES
