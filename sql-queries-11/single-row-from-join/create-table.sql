@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS countries
 (
     country_id integer NOT NULL,
-    country_name text ,
+    country_name text,
     CONSTRAINT countries_pkey PRIMARY KEY (country_id)
 );
 
@@ -25,7 +25,7 @@ INSERT INTO countries (country_id, country_name)
 
 INSERT INTO cities (city_id, country_id, city_name, population)
     VALUES
-	    ( 1, 1, 'Washington',689545),
+	( 1, 1, 'Washington',689545),
         ( 2,1,'New York', 8804190),
         ( 3, 2, 'London', 12208100 ),
         ( 4 , 2, 'Manchester', 2732854),
