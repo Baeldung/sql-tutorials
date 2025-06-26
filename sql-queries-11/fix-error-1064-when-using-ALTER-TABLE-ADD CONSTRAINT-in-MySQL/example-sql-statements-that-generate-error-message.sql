@@ -1,16 +1,16 @@
-//Correct syntax
+# Correct syntax
 ALTER TABLE specification
 ADD CONSTRAINT specification_program_id_fkey 
 FOREIGN KEY (program_id)
 REFERENCES program (id);
 
-//Incorrect syntax; jumbled syntax
+# Incorrect syntax; jumbled syntax
 ALTER TABLE specification
 ADD FOREIGN KEY specification_program_id_fkey 
 CONSTRAINT(program_id)
 REFERENCES program(id);
 
-//Incorrect syntax; wrong punctuation
+# Incorrect syntax; wrong punctuation
 ALTER TABLE specification (
 ADD CONSTRAINT
   specification_program_id_fkey 
@@ -18,37 +18,37 @@ ADD CONSTRAINT
   REFERENCES program (id)
 );
 
-//Incorrect syntax; a reserved word
+# Incorrect syntax; a reserved word
 ALTER TABLE specification
 ADD CONSTRAINT foreign 
 FOREIGN KEY (program_id)
 REFERENCES program (id);
 
-//Incorrect syntax, misspelled keyword REFERENCES
+# Incorrect syntax, misspelled keyword REFERENCES
 ALTER TABLE specification
 ADD CONSTRAINT specification_program_id_fkey 
 FOREIGN KEY(program_id)
 REFERENCE program (id);
 
-//Incorrect syntax, missing closing parenthesis
+# Incorrect syntax, missing closing parenthesis
 ALTER TABLE specification
 ADD CONSTRAINT specification_program_id_fkey 
 FOREIGN KEY(program_id
 REFERENCES program (id);
 
-//Incorrect syntax; quotes
+# Incorrect syntax; quotes
 ALTER TABLE "specification"
 ADD CONSTRAINT specification_program_id_fkey 
 FOREIGN KEY("program_id")
 REFERENCES program ("id");
 
-//Correct syntax; backticks
+# Correct syntax; backticks
 ALTER TABLE `specification`
 ADD CONSTRAINT specification_program_id_fkey 
 FOREIGN KEY(`program_id`)
 REFERENCES program (`id`);
 
-//Incorrect syntax, missing required elements
+# Incorrect syntax, missing required elements
 ALTER TABLE specification
 ADD CONSTRAINT specification_program_id_fkey
 FOREIGN KEY(program_id);
