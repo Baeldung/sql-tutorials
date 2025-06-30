@@ -1,54 +1,54 @@
 # Correct syntax
-ALTER TABLE specification
+ALTER TABLE Specification
 ADD CONSTRAINT specification_program_id_fkey 
 FOREIGN KEY (program_id)
-REFERENCES program (id);
+REFERENCES Program (id);
 
 # Incorrect syntax; jumbled syntax
-ALTER TABLE specification
+ALTER TABLE Specification
 ADD FOREIGN KEY specification_program_id_fkey 
-CONSTRAINT(program_id)
-REFERENCES program(id);
+CONSTRAINT (program_id)
+REFERENCES Program (id);
 
 # Incorrect syntax; wrong punctuation
-ALTER TABLE specification (
+ALTER TABLE Specification (
 ADD CONSTRAINT
   specification_program_id_fkey 
-  FOREIGN KEY(program_id)
-  REFERENCES program (id)
+  FOREIGN KEY (program_id)
+  REFERENCES Program (id)
 );
 
 # Incorrect syntax; a reserved word
-ALTER TABLE specification
+ALTER TABLE Specification
 ADD CONSTRAINT foreign 
 FOREIGN KEY (program_id)
-REFERENCES program (id);
+REFERENCES Program (id);
 
 # Incorrect syntax, misspelled keyword REFERENCES
-ALTER TABLE specification
+ALTER TABLE Specification
 ADD CONSTRAINT specification_program_id_fkey 
-FOREIGN KEY(program_id)
-REFERENCE program (id);
+FOREIGN KEY (program_id)
+REFERENCE Program (id);
 
 # Incorrect syntax, missing closing parenthesis
-ALTER TABLE specification
+ALTER TABLE Specification
 ADD CONSTRAINT specification_program_id_fkey 
-FOREIGN KEY(program_id
-REFERENCES program (id);
+FOREIGN KEY (program_id
+REFERENCES Program (id);
 
 # Incorrect syntax; quotes
-ALTER TABLE "specification"
+ALTER TABLE "Specification"
 ADD CONSTRAINT specification_program_id_fkey 
-FOREIGN KEY("program_id")
-REFERENCES program ("id");
+FOREIGN KEY ("program_id")
+REFERENCES Program ("id");
 
 # Correct syntax; backticks
-ALTER TABLE `specification`
+ALTER TABLE `Specification`
 ADD CONSTRAINT specification_program_id_fkey 
-FOREIGN KEY(`program_id`)
-REFERENCES program (`id`);
+FOREIGN KEY (`program_id`)
+REFERENCES Program (`id`);
 
 # Incorrect syntax, missing required elements
-ALTER TABLE specification
+ALTER TABLE Specification
 ADD CONSTRAINT specification_program_id_fkey
-FOREIGN KEY(program_id);
+FOREIGN KEY (program_id);
