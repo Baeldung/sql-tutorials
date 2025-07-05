@@ -38,13 +38,13 @@ REFERENCES Program (id);
 
 # Incorrect syntax; quotes
 ALTER TABLE "Specification"
-ADD CONSTRAINT specification_program_id_fkey 
+ADD CONSTRAINT "specification_program_id_fkey" 
 FOREIGN KEY ("program_id")
 REFERENCES Program ("id");
 
 # Correct syntax; backticks
 ALTER TABLE `Specification`
-ADD CONSTRAINT specification_program_id_fkey 
+ADD CONSTRAINT `specification_program_id_fkey` 
 FOREIGN KEY (`program_id`)
 REFERENCES Program (`id`);
 
