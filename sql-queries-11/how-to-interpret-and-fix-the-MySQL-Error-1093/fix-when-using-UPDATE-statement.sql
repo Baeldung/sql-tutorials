@@ -3,11 +3,13 @@ UPDATE Program t
 SET t.end_date = (SELECT start_date FROM Program WHERE id=t.id);
 
 -- This statement fixes the Error 1093 in the preceding example using a derived table
-UPDATE Program t 
-SET t.end_date = (
-  SELECT subquery_program.start_date FROM (
-    SELECT id, start_date FROM Program WHERE id=t.id
-  ) AS subquery_program
+UPDATE Program
+SET end_date = (
+  SELECT max_start_date
+  FROM (
+        SELECT MAX(start_date) AS max_start_date 
+        FROM Program
+       ) AS derived_table
 );
 
 -- This set of statements fixes the Error 1093 in the same example using a temporary table
