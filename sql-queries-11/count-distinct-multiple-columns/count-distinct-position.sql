@@ -1,0 +1,2 @@
+SELECT COUNT(DISTINCT position)
+FROM Faculty;
