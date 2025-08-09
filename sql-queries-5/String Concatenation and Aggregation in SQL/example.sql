@@ -1,0 +1,1 @@
+USE University; SELECT s.name AS student_name, CONCAT('Student ID: ', s.id, ', National ID: ', s.national_id) AS student_info, STRING_AGG(CONCAT(c.name, ' (Grade: ', g.grade, ')'), '; ') AS course_grades FROM Student s JOIN Enrollment e ON s.id = e.student_id JOIN Course c ON e.course_id = c.id JOIN Grade g ON e.grade_id = g.id GROUP BY s.name, s.id, s.national_id;
