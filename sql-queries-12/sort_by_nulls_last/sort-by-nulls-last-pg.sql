@@ -1,0 +1,1 @@
+SELECT * FROM Student ORDER BY graduation_date ASC NULLS LAST;

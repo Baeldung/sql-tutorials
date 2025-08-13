@@ -1,5 +1,5 @@
 -- Grouping by a Column Derived from a Scalar Subselect or Non-Deterministic Function
-ITH AgeCategories AS ( 
+WITH AgeCategories AS ( 
         SELECT s.id AS student_id, 
                 s.name AS student_name, 
                 TIMESTAMPDIFF(YEAR, s.birth_date, s.enrollment_date) AS age_at_enrollment, 
